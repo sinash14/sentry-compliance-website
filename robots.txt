@@ -1,0 +1,7 @@
+# robots.txt — Sentry Compliance
+# https://sentrycompliance.com.au
+
+User-agent: *
+Allow: /
+
+Sitemap: https://sentrycompliance.com.au/sitemap.xml
