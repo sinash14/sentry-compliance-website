@@ -434,6 +434,27 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
   .ft-bottom{flex-direction:column}
   .flow{min-width:500px}
 }
+
+/* SERVICE MODEL SECTION */
+.model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.model-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--amber);padding:2rem;border-radius:2px}
+.model-icon{width:44px;height:44px;background:rgba(212,160,23,.08);border:1px solid rgba(212,160,23,.2);border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.model-icon svg{width:22px;height:22px}
+.model-card h3{color:var(--dark);font-size:1.2rem;margin-bottom:.75rem}
+.model-card p{font-size:.92rem;color:#4A6070;line-height:1.75}
+.model-factors{background:var(--navy);border:1px solid var(--bd);border-left:3px solid var(--amber);border-radius:2px;padding:2rem;margin-top:2rem}
+.model-factors-title{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);margin-bottom:1.25rem}
+.factors-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.factor{display:flex;align-items:flex-start;gap:.75rem}
+.factor-num{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--amber);line-height:1;flex-shrink:0;width:1.75rem}
+.factor-lbl{font-size:.84rem;color:var(--lt);line-height:1.55;padding-top:.15rem}
+.model-cta{margin-top:2rem}
+.model-cta-inner{background:var(--light);border:1px solid var(--border);border-radius:2px;padding:2rem;display:flex;justify-content:space-between;align-items:center;gap:2rem}
+.model-cta-inner h3{font-size:1.35rem;color:var(--dark);margin-bottom:.5rem}
+.model-cta-inner p{font-size:.92rem;color:#4A6070;line-height:1.7;max-width:520px}
+.model-cta-actions{display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;flex-shrink:0}
+@media(max-width:960px){.model-grid,.factors-row{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.model-grid,.factors-row{grid-template-columns:1fr}.model-cta-inner{flex-direction:column}.model-cta-actions{width:100%}.model-cta-actions .btn{width:100%;justify-content:center}}
 </style>
 
 <!-- NAV -->
@@ -444,7 +465,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
       <a href="#risk" role="menuitem">The Risk</a>
       <a href="#how-it-works" role="menuitem">How It Works</a>
       <a href="#what-you-get" role="menuitem">What You Get</a>
-      <a href="#pricing" role="menuitem">Pricing</a>
+      <a href="#service-model" role="menuitem">Our Model</a>
       <a href="#faq" role="menuitem">FAQ</a>
       <a href="#contact" role="menuitem">Contact</a>
     </div>
@@ -458,7 +479,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
   <a href="#risk" class="mob-link">The Risk</a>
   <a href="#how-it-works" class="mob-link">How It Works</a>
   <a href="#what-you-get" class="mob-link">What You Get</a>
-  <a href="#pricing" class="mob-link">Pricing</a>
+  <a href="#service-model" class="mob-link">Our Model</a>
   <a href="#faq" class="mob-link">FAQ</a>
   <a href="#contact" class="mob-link">Contact</a>
   <a href="#contact" class="btn btn-amber">Book Free Audit</a>
@@ -866,46 +887,73 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
   </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing" class="pad" aria-labelledby="h2-pricing">
+<!-- TAILORED SERVICE -->
+<section id="service-model" class="pad" aria-labelledby="h2-service-model">
   <div class="wrap">
-    <p class="eyebrow fade">Investment</p>
-    <h2 id="h2-pricing" class="fade">Simple Managed-Service Pricing</h2>
-    <p class="fade" style="max-width:620px;color:#4A6070;font-size:1.04rem;line-height:1.85;margin-top:.875rem">You do not buy sensors. Sentry Compliance owns, maintains, and supports the monitoring hardware. Your pharmacy receives a fully managed compliance monitoring service.</p>
-    <div class="price-cards">
-      <div class="pc fade" aria-label="Standard monitoring package for 1 to 2 cold storage units">
-        <div class="pc-hd"><p class="pc-tier">Standard Package</p><h3>1&ndash;2 Cold Storage Units</h3><p class="pc-for">Suitable for most independent pharmacies</p></div>
-        <div class="pc-body">
-          <div class="pc-line"><span class="pc-ll">Installation &amp; setup</span><span class="pc-lv">$895 <span>one-time</span></span></div>
-          <div class="pc-line"><span class="pc-ll">Monitoring service</span><span class="pc-lv">$195 <span>/month</span></span></div>
-          <div class="pc-line"><span class="pc-ll">Annual calibration support</span><span class="pc-lv">$195 <span>/year</span></span></div>
-          <div class="pc-incl"><h4>Includes</h4><ul>
-            <li>2&ndash;3 wireless sensors</li><li>Dedicated cellular gateway</li>
-            <li>Continuous 24/7 monitoring</li><li>SMS and email alerts with escalation</li>
-            <li>Monthly compliance report (PDF)</li><li>Annual calibration documentation</li>
-            <li>Dedicated support</li>
-          </ul></div>
+    <p class="eyebrow fade">The Service Model</p>
+    <h2 id="h2-service-model" class="fade">A Managed Service, Not a Product Purchase</h2>
+    <p class="fade" style="max-width:660px;color:#4A6070;font-size:1.04rem;line-height:1.85;margin-top:.875rem">
+      Sentry Compliance is not a sensor kit you buy and manage yourself. It is a fully managed compliance
+      monitoring service. We own the hardware, install it professionally, monitor it continuously, and
+      deliver a monthly compliance report to your inbox. If something needs attention, we handle it.
+    </p>
+
+    <!-- Three model pillars -->
+    <div class="model-grid fade">
+      <div class="model-card">
+        <div class="model-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+          </svg>
         </div>
+        <h3>We Own the Hardware</h3>
+        <p>There is no upfront equipment purchase. Sentry Compliance owns, installs, and maintains the sensors and cellular gateway. You receive a managed service, not a box of devices.</p>
       </div>
-      <div class="pc feat-pc fade" aria-label="Extended monitoring package for 3 to 4 cold storage units, most common">
-        <div class="pc-hd"><span class="pc-badge">Most Common</span><p class="pc-tier">Extended Package</p><h3>3&ndash;4 Cold Storage Units</h3><p class="pc-for">For pharmacies with additional cold storage</p></div>
-        <div class="pc-body">
-          <div class="pc-line"><span class="pc-ll">Installation &amp; setup</span><span class="pc-lv">$1,395 <span>one-time</span></span></div>
-          <div class="pc-line"><span class="pc-ll">Monitoring service</span><span class="pc-lv">$275 <span>/month</span></span></div>
-          <div class="pc-line"><span class="pc-ll">Annual calibration support</span><span class="pc-lv">$275 <span>/year</span></span></div>
-          <div class="pc-incl"><h4>Includes</h4><ul>
-            <li>4&ndash;6 wireless sensors</li><li>Dedicated cellular gateway</li>
-            <li>Continuous 24/7 monitoring</li><li>SMS and email alerts with escalation</li>
-            <li>Monthly compliance report (PDF)</li><li>Annual calibration documentation</li>
-            <li>Dedicated support</li>
-          </ul></div>
+      <div class="model-card">
+        <div class="model-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8m8 4H8m2-8H8"/>
+          </svg>
         </div>
+        <h3>One Monthly Service Fee</h3>
+        <p>A single monthly fee covers monitoring, alerts, reporting, maintenance, and support. No surprise hardware invoices. No per-alert charges. No separate calibration bill mid-year.</p>
+      </div>
+      <div class="model-card">
+        <div class="model-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h3>Sized to Your Pharmacy</h3>
+        <p>Service configuration is based on the number of cold storage units and sites. Single-site independent pharmacies and multi-site operators are both supported, with pricing quoted after the free audit.</p>
       </div>
     </div>
-    <p class="price-note fade">12-month minimum subscription. Hardware remains owned and maintained by Sentry Compliance. Multi-site pricing available for owners with two or more pharmacies.</p>
-    <div class="price-cta fade">
-      <a href="#contact" class="btn btn-amber">Book Your Free Compliance Audit</a>
-      <span class="micro">No obligation. Melbourne pharmacies only during initial rollout.</span>
+
+    <!-- What affects service design -->
+    <div class="model-factors fade">
+      <p class="model-factors-title">What we assess during the free audit to design your service</p>
+      <div class="factors-row">
+        <div class="factor"><span class="factor-num">01</span><span class="factor-lbl">Number of cold storage units requiring monitoring</span></div>
+        <div class="factor"><span class="factor-num">02</span><span class="factor-lbl">Physical location of each unit within the pharmacy</span></div>
+        <div class="factor"><span class="factor-num">03</span><span class="factor-lbl">Nominated alert contacts and escalation preferences</span></div>
+        <div class="factor"><span class="factor-num">04</span><span class="factor-lbl">Single site or multi-site operation</span></div>
+        <div class="factor"><span class="factor-num">05</span><span class="factor-lbl">Existing monitoring equipment, if any</span></div>
+        <div class="factor"><span class="factor-num">06</span><span class="factor-lbl">Reporting requirements for accreditation or insurance</span></div>
+      </div>
+    </div>
+
+    <!-- Quote CTA -->
+    <div class="model-cta fade">
+      <div class="model-cta-inner">
+        <div>
+          <h3>Pricing is provided after the free audit</h3>
+          <p>Every pharmacy is different. The free compliance audit lets us assess your setup, confirm the service configuration, and provide a written quote with no obligation to proceed.</p>
+        </div>
+        <div class="model-cta-actions">
+          <a href="#contact" class="btn btn-amber">Book Your Free Compliance Audit</a>
+          <span class="micro">No obligation. Melbourne pharmacies only during initial rollout.</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
