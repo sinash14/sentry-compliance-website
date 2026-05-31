@@ -1326,22 +1326,27 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-/* IntersectionObserver — fallback only when GSAP is unavailable */
-if (typeof gsap === 'undefined') {
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+/* IntersectionObserver — PRIMARY scroll reveal system
+   Handles all .fade elements. GSAP is decorative-only on top of this. */
+(function () {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
       if (!entry.isIntersecting) return;
-      const sibs = [...entry.target.parentElement.querySelectorAll('.fade')];
-      const i = sibs.indexOf(entry.target);
-      setTimeout(() => entry.target.classList.add('in'), i * 70);
+      var sibs = Array.from(entry.target.parentElement.querySelectorAll('.fade'));
+      var i = sibs.indexOf(entry.target);
+      setTimeout(function() { entry.target.classList.add('in'); }, i * 80);
       io.unobserve(entry.target);
     });
-  }, { threshold: 0, rootMargin: '0px 0px 9999px 0px' });
-  document.querySelectorAll('.fade').forEach(el => io.observe(el));
-}
-/* Fallback: ensure all elements visible after page load */
-window.addEventListener('load', () => {
-  setTimeout(() => document.querySelectorAll('.fade').forEach(el => el.classList.add('in')), 100);
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.fade').forEach(function(el) { io.observe(el); });
+})();
+/* Safety fallback: after 3s, reveal any .fade elements the observer missed */
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.querySelectorAll('.fade:not(.in)').forEach(function(el) {
+      el.classList.add('in');
+    });
+  }, 3000);
 });
 
 /* FAQ accordion */
@@ -1393,10 +1398,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Always ensure all .fade elements are visible — CSS IntersectionObserver handles reveals
-  // GSAP only adds decorative motion on top, never hides content
-  document.querySelectorAll('.fade').forEach(el => el.classList.add('in'));
-
+  // IntersectionObserver handles all scroll reveals
+  // GSAP only runs decorative hero animations — do NOT add .in to all elements here
   if (reducedMotion) return;
 
   /* ----------------------------------------------------------
