@@ -1,1530 +1,1132 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sentry Compliance | Pharmacy Cold Chain Monitoring Melbourne</title>
-  <meta name="description" content="Sentry Compliance provides TGA-aligned cold chain monitoring for Melbourne pharmacies. 24/7 temperature alerts, monthly compliance reports, annual calibration, and audit-ready documentation. Book a free compliance audit.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://sentrycompliance.com.au/">
-  <meta property="og:title" content="Sentry Compliance | Pharmacy Cold Chain Monitoring Melbourne">
-  <meta property="og:description" content="TGA-aligned cold chain monitoring for Melbourne pharmacies: 24/7 alerts, monthly compliance reports, annual calibration support, and audit-ready documentation.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sentrycompliance.com.au/">
-  <meta property="og:locale" content="en_AU">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --navy: #0B1929;
-      --navy-2: #132338;
-      --charcoal: #07111F;
-      --amber: #D4A017;
-      --light: #F6F7F9;
-      --white: #FFFFFF;
-      --light-text: #F0F4F8;
-      --muted: #8FA8C0;
-      --dark-text: #142033;
-      --border: #D9DEE5;
-      --shadow: 0 18px 45px rgba(7, 17, 31, .16);
-      --max: 1180px;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 86px;
-    }
-
-    body {
-      margin: 0;
-      background: var(--light);
-      color: var(--dark-text);
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
-    img, svg { max-width: 100%; }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button, input, select, textarea {
-      font: inherit;
-    }
-
-    .skip-link {
-      position: absolute;
-      left: 16px;
-      top: -60px;
-      z-index: 1000;
-      background: var(--amber);
-      color: var(--navy);
-      padding: 10px 14px;
-      font-weight: 700;
-    }
-
-    .skip-link:focus { top: 12px; }
-
-    .container {
-      width: min(100% - 32px, var(--max));
-      margin-inline: auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(11, 25, 41, .98);
-      border-bottom: 1px solid rgba(212, 160, 23, .72);
-      backdrop-filter: blur(10px);
-    }
-
-    .nav-wrap {
-      min-height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--white);
-      font-weight: 700;
-      letter-spacing: .08em;
-      font-size: 15px;
-      white-space: nowrap;
-    }
-
-    .brand-mark {
-      width: 30px;
-      height: 30px;
-      border: 1px solid rgba(212, 160, 23, .82);
-      display: grid;
-      place-items: center;
-      color: var(--amber);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 20px;
-      line-height: 1;
-    }
-
-    .brand span span { color: var(--amber); }
-
-    .main-nav {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      color: var(--light-text);
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: .03em;
-    }
-
-    .main-nav a:not(.nav-cta) {
-      opacity: .88;
-      transition: color .2s ease, opacity .2s ease;
-    }
-
-    .main-nav a:not(.nav-cta):hover,
-    .main-nav a:not(.nav-cta):focus {
-      color: var(--amber);
-      opacity: 1;
-    }
-
-    .nav-cta, .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 12px 18px;
-      border: 1px solid transparent;
-      background: var(--amber);
-      color: var(--navy);
-      font-weight: 700;
-      letter-spacing: .02em;
-      cursor: pointer;
-      transition: transform .2s ease, background .2s ease, border-color .2s ease;
-    }
-
-    .nav-cta:hover, .btn:hover { transform: translateY(-1px); }
-
-    .btn.secondary {
-      background: transparent;
-      color: var(--light-text);
-      border-color: rgba(240, 244, 248, .34);
-    }
-
-    .btn.secondary:hover {
-      border-color: var(--amber);
-      color: var(--amber);
-    }
-
-    .menu-toggle {
-      display: none;
-      width: 44px;
-      height: 44px;
-      border: 1px solid rgba(240, 244, 248, .25);
-      background: transparent;
-      color: var(--white);
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      display: block;
-      width: 20px;
-      height: 2px;
-      margin: 5px auto;
-      background: currentColor;
-    }
-
-    .hero, .dark-section, .contact-section {
-      color: var(--light-text);
-      background:
-        linear-gradient(rgba(212, 160, 23, .035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(212, 160, 23, .035) 1px, transparent 1px),
-        radial-gradient(circle at 70% 10%, rgba(212, 160, 23, .12), transparent 32%),
-        var(--navy);
-      background-size: 34px 34px, 34px 34px, auto, auto;
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 92px 0 82px;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212, 160, 23, .75), transparent);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.04fr) minmax(320px, .72fr);
-      gap: 54px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      margin: 0 0 18px;
-      color: var(--amber);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 42px;
-      height: 1px;
-      background: currentColor;
-    }
-
-    h1, h2, h3 {
-      font-family: "Cormorant Garamond", Georgia, serif;
-      line-height: .98;
-      margin: 0;
-      letter-spacing: 0;
-    }
-
-    h1 {
-      max-width: 760px;
-      font-size: clamp(48px, 6.8vw, 86px);
-      color: var(--white);
-    }
-
-    h2 {
-      max-width: 820px;
-      font-size: clamp(38px, 4.6vw, 62px);
-      color: var(--dark-text);
-    }
-
-    .dark-section h2,
-    .contact-section h2 { color: var(--white); }
-
-    h3 {
-      font-size: 28px;
-      color: inherit;
-    }
-
-    .lead {
-      max-width: 740px;
-      margin: 22px 0 0;
-      color: rgba(240, 244, 248, .86);
-      font-size: 21px;
-      line-height: 1.5;
-    }
-
-    .section-intro {
-      max-width: 820px;
-      margin: 20px 0 0;
-      font-size: 20px;
-      color: #4E6176;
-    }
-
-    .dark-section .section-intro,
-    .contact-section .section-intro { color: rgba(240, 244, 248, .78); }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      align-items: center;
-      margin-top: 34px;
-    }
-
-    .microcopy {
-      margin: 12px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 34px;
-      padding: 0;
-      list-style: none;
-    }
-
-    .trust-row li {
-      border: 1px solid rgba(240, 244, 248, .18);
-      background: rgba(255, 255, 255, .035);
-      color: var(--light-text);
-      padding: 9px 12px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .monitor-panel {
-      border: 1px solid rgba(212, 160, 23, .48);
-      background: linear-gradient(180deg, rgba(19, 35, 56, .96), rgba(7, 17, 31, .94));
-      box-shadow: var(--shadow);
-      padding: 22px;
-    }
-
-    .panel-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid rgba(240, 244, 248, .12);
-      color: var(--muted);
-      font-size: 13px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .status-dot {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #BEE6C8;
-      font-weight: 700;
-      letter-spacing: 0;
-      text-transform: none;
-    }
-
-    .status-dot::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #74D98B;
-      box-shadow: 0 0 0 5px rgba(116, 217, 139, .12);
-    }
-
-    .readings {
-      display: grid;
-      gap: 14px;
-      margin-top: 20px;
-    }
-
-    .reading {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 12px;
-      padding: 18px;
-      border: 1px solid rgba(240, 244, 248, .12);
-      background: rgba(255, 255, 255, .035);
-    }
-
-    .reading strong {
-      color: var(--white);
-      font-size: 16px;
-    }
-
-    .temp {
-      color: var(--amber);
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 1;
-    }
-
-    .normal {
-      color: #BEE6C8;
-      font-weight: 700;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
-
-    .panel-meta {
-      display: grid;
-      gap: 10px;
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .panel-meta div {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      border-top: 1px solid rgba(240, 244, 248, .1);
-      padding-top: 10px;
-    }
-
-    .panel-meta span:last-child {
-      color: var(--light-text);
-      font-weight: 600;
-      text-align: right;
-    }
-
-    section {
-      padding: 86px 0;
-    }
-
-    .section-head {
-      display: grid;
-      gap: 8px;
-      margin-bottom: 38px;
-    }
-
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card, .feature-card, .trust-card, .price-card, .faq-item, .contact-card {
-      border: 1px solid var(--border);
-      background: var(--white);
-      padding: 28px;
-      box-shadow: 0 12px 30px rgba(7, 17, 31, .06);
-    }
-
-    .card h3, .feature-card h3, .trust-card h3 {
-      margin-bottom: 12px;
-      color: var(--dark-text);
-    }
-
-    .card p, .feature-card p, .trust-card p {
-      margin: 0;
-      color: #4E6176;
-    }
-
-    .evidence-band {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      margin-top: 38px;
-      border: 1px solid var(--border);
-      background: var(--border);
-    }
-
-    .evidence-item {
-      background: var(--white);
-      padding: 26px 20px;
-      min-height: 128px;
-    }
-
-    .evidence-item span {
-      display: block;
-      width: 34px;
-      height: 2px;
-      margin-bottom: 18px;
-      background: var(--amber);
-    }
-
-    .evidence-item strong {
-      display: block;
-      font-size: 20px;
-      color: var(--dark-text);
-    }
-
-    .closing-note {
-      margin-top: 28px;
-      padding-left: 18px;
-      border-left: 2px solid var(--amber);
-      font-size: 20px;
-      color: var(--dark-text);
-      font-weight: 600;
-    }
-
-    .steps {
-      counter-reset: steps;
-      display: grid;
-      gap: 18px;
-    }
-
-    .step {
-      counter-increment: steps;
-      display: grid;
-      grid-template-columns: 78px 1fr;
-      gap: 22px;
-      align-items: start;
-      padding: 28px;
-      border: 1px solid var(--border);
-      background: var(--white);
-    }
-
-    .step::before {
-      content: "0" counter(steps);
-      display: grid;
-      place-items: center;
-      width: 58px;
-      height: 58px;
-      border: 1px solid var(--amber);
-      color: var(--amber);
-      font-weight: 700;
-      letter-spacing: .08em;
-    }
-
-    .step p { margin: 12px 0 0; color: #4E6176; }
-
-    .dark-section {
-      background:
-        linear-gradient(rgba(212, 160, 23, .028) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(212, 160, 23, .028) 1px, transparent 1px),
-        var(--navy);
-      background-size: 34px 34px;
-    }
-
-    .dark-section .feature-card,
-    .dark-section .trust-card {
-      background: rgba(19, 35, 56, .94);
-      border-color: rgba(240, 244, 248, .12);
-      box-shadow: none;
-    }
-
-    .dark-section .feature-card h3,
-    .dark-section .trust-card h3 { color: var(--white); }
-
-    .dark-section .feature-card p,
-    .dark-section .trust-card p { color: rgba(240, 244, 248, .72); }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .feature-num {
-      display: inline-block;
-      margin-bottom: 18px;
-      color: var(--amber);
-      font-weight: 700;
-      letter-spacing: .12em;
-    }
-
-    .report-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 44px;
-      align-items: center;
-    }
-
-    .report-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      padding: 0;
-      margin: 28px 0 0;
-      list-style: none;
-    }
-
-    .report-list li {
-      border-left: 2px solid var(--amber);
-      background: var(--white);
-      padding: 10px 14px;
-      color: #4E6176;
-      font-weight: 600;
-    }
-
-    .report-mock {
-      background: var(--white);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      padding: 34px;
-    }
-
-    .report-title {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      align-items: start;
-      border-bottom: 2px solid var(--dark-text);
-      padding-bottom: 18px;
-      margin-bottom: 20px;
-    }
-
-    .report-title strong {
-      color: var(--dark-text);
-      font-size: 15px;
-      letter-spacing: .12em;
-    }
-
-    .report-title span {
-      color: var(--amber);
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: .08em;
-    }
-
-    .report-row {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 18px;
-      padding: 13px 0;
-      border-bottom: 1px solid var(--border);
-      color: #4E6176;
-    }
-
-    .report-row strong {
-      color: var(--dark-text);
-      text-align: right;
-    }
-
-    .report-foot {
-      margin: 22px 0 0;
-      color: #4E6176;
-      font-weight: 600;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-      margin-top: 38px;
-    }
-
-    .price-card {
-      position: relative;
-      padding: 34px;
-    }
-
-    .price-card.featured {
-      border-color: var(--amber);
-      box-shadow: 0 18px 45px rgba(212, 160, 23, .18);
-    }
-
-    .badge {
-      position: absolute;
-      top: 24px;
-      right: 24px;
-      background: var(--navy);
-      color: var(--amber);
-      padding: 6px 10px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .price-card h3 {
-      font-family: "Barlow", Arial, sans-serif;
-      font-size: 17px;
-      line-height: 1.2;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--dark-text);
-    }
-
-    .package-for {
-      margin: 8px 0 22px;
-      color: #4E6176;
-    }
-
-    .price-lines {
-      display: grid;
-      gap: 10px;
-      padding: 18px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .price-lines div {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      color: #4E6176;
-    }
-
-    .price-lines strong {
-      color: var(--dark-text);
-      text-align: right;
-    }
-
-    .include-list, .audit-list {
-      padding: 0;
-      margin: 24px 0 0;
-      list-style: none;
-      display: grid;
-      gap: 10px;
-    }
-
-    .include-list li, .audit-list li {
-      position: relative;
-      padding-left: 24px;
-      color: #4E6176;
-    }
-
-    .include-list li::before, .audit-list li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: .68em;
-      width: 9px;
-      height: 9px;
-      border: 1px solid var(--amber);
-      background: rgba(212, 160, 23, .12);
-    }
-
-    .pricing-note {
-      margin: 22px 0 0;
-      color: #4E6176;
-    }
-
-    .audit-panel {
-      display: grid;
-      grid-template-columns: 1fr .72fr;
-      gap: 36px;
-      align-items: start;
-      border: 1px solid var(--border);
-      background: var(--white);
-      padding: 36px;
-      box-shadow: 0 12px 30px rgba(7, 17, 31, .06);
-    }
-
-    .reassurance {
-      border-left: 2px solid var(--amber);
-      padding-left: 20px;
-      color: #4E6176;
-      font-size: 19px;
-    }
-
-    .faq-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .faq-item {
-      padding: 0;
-      overflow: hidden;
-    }
-
-    .faq-question {
-      width: 100%;
-      border: 0;
-      background: var(--white);
-      color: var(--dark-text);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 22px 24px;
-      cursor: pointer;
-      text-align: left;
-      font-weight: 700;
-    }
-
-    .faq-question span {
-      flex: none;
-      width: 26px;
-      height: 26px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--border);
-      color: var(--amber);
-      font-size: 22px;
-      line-height: 1;
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .25s ease;
-      border-top: 1px solid transparent;
-    }
-
-    .faq-answer p {
-      margin: 0;
-      padding: 0 24px 22px;
-      color: #4E6176;
-    }
-
-    .faq-item.is-open .faq-answer {
-      max-height: 260px;
-      border-top-color: var(--border);
-    }
-
-    .faq-item.is-open .faq-question span { transform: rotate(45deg); }
-
-    .contact-section {
-      background:
-        linear-gradient(rgba(212, 160, 23, .028) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(212, 160, 23, .028) 1px, transparent 1px),
-        var(--navy);
-      background-size: 34px 34px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 340px;
-      gap: 28px;
-      align-items: start;
-      margin-top: 36px;
-    }
-
-    .audit-form {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      background: var(--white);
-      color: var(--dark-text);
-      border: 1px solid rgba(212, 160, 23, .38);
-      padding: 28px;
-    }
-
-    .field {
-      display: grid;
-      gap: 7px;
-    }
-
-    .field.full { grid-column: 1 / -1; }
-
-    label {
-      color: var(--dark-text);
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      border: 1px solid var(--border);
-      background: #FBFCFD;
-      color: var(--dark-text);
-      padding: 12px 13px;
-      min-height: 48px;
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    input:focus, select:focus, textarea:focus,
-    .faq-question:focus, .menu-toggle:focus, a:focus, button:focus {
-      outline: 2px solid var(--amber);
-      outline-offset: 3px;
-    }
-
-    .form-note {
-      grid-column: 1 / -1;
-      margin: 0;
-      color: #4E6176;
-      font-size: 14px;
-    }
-
-    .contact-card {
-      background: var(--navy-2);
-      border-color: rgba(240, 244, 248, .12);
-      color: var(--light-text);
-      box-shadow: none;
-    }
-
-    .contact-card h3 { color: var(--white); margin-bottom: 18px; }
-
-    .contact-card dl {
-      display: grid;
-      gap: 14px;
-      margin: 0;
-    }
-
-    .contact-card dt {
-      color: var(--muted);
-      font-size: 13px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .contact-card dd {
-      margin: 3px 0 0;
-      color: var(--light-text);
-      font-weight: 600;
-    }
-
-    .site-footer {
-      background: var(--charcoal);
-      color: rgba(240, 244, 248, .78);
-      padding: 34px 0;
-      border-top: 1px solid rgba(212, 160, 23, .38);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .footer-brand {
-      color: var(--white);
-      font-weight: 700;
-      letter-spacing: .06em;
-      margin-bottom: 8px;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      color: var(--light-text);
-      font-weight: 600;
-    }
-
-    .disclaimer {
-      grid-column: 1 / -1;
-      margin: 4px 0 0;
-      padding-top: 18px;
-      border-top: 1px solid rgba(240, 244, 248, .12);
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .55s ease, transform .55s ease;
-    }
-
-    .fade-in.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after {
-        animation-duration: .001ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .001ms !important;
-      }
-      .fade-in {
-        opacity: 1;
-        transform: none;
-      }
-    }
-
-    @media (max-width: 940px) {
-      .menu-toggle { display: block; }
-
-      .main-nav {
-        position: absolute;
-        inset: 74px 0 auto;
-        display: grid;
-        gap: 0;
-        background: var(--navy);
-        border-bottom: 1px solid rgba(212, 160, 23, .45);
-        padding: 12px 16px 18px;
-        transform: translateY(-130%);
-        opacity: 0;
-        pointer-events: none;
-        transition: transform .25s ease, opacity .25s ease;
-      }
-
-      .main-nav a {
-        padding: 13px 0;
-        border-bottom: 1px solid rgba(240, 244, 248, .1);
-      }
-
-      .main-nav .nav-cta {
-        margin-top: 12px;
-        border-bottom: 0;
-      }
-
-      body.nav-open .main-nav {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      .hero-grid, .report-grid, .audit-panel, .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cards-grid, .feature-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .evidence-band {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 680px) {
-      body { font-size: 16px; }
-      section { padding: 66px 0; }
-      .hero { padding: 70px 0 66px; }
-      .container { width: min(100% - 24px, var(--max)); }
-      .brand { font-size: 13px; letter-spacing: .06em; }
-      h1 { font-size: 46px; }
-      h2 { font-size: 38px; }
-      .lead, .section-intro { font-size: 18px; }
-      .cards-grid, .feature-grid, .pricing-grid, .evidence-band, .report-list, .audit-form {
-        grid-template-columns: 1fr;
-      }
-      .step {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-      .report-title, .report-row, .price-lines div, .panel-meta div {
-        grid-template-columns: 1fr;
-      }
-      .report-row strong, .price-lines strong, .panel-meta span:last-child {
-        text-align: left;
-      }
-      .audit-panel, .report-mock, .audit-form, .contact-card, .price-card, .card, .feature-card, .trust-card {
-        padding: 22px;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Sentry Compliance",
-    "url": "https://sentrycompliance.com.au/",
-    "telephone": "[ADD PHONE NUMBER]",
-    "email": "[ADD EMAIL]",
-    "identifier": "[ADD ABN]",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Melbourne",
-      "addressRegion": "VIC",
-      "addressCountry": "AU"
-    },
-    "areaServed": "Melbourne metropolitan area",
-    "description": "Fully managed TGA-aligned cold chain temperature monitoring for independent community pharmacies in Melbourne."
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Pharmacy cold chain temperature monitoring",
-    "provider": {
-      "@type": "ProfessionalService",
-      "name": "Sentry Compliance",
-      "telephone": "[ADD PHONE NUMBER]",
-      "email": "[ADD EMAIL]"
-    },
-    "serviceType": "Fully managed cold chain compliance monitoring",
-    "areaServed": {
-      "@type": "City",
-      "name": "Melbourne"
-    },
-    "description": "Continuous wireless vaccine fridge monitoring with SMS and email alerts, monthly compliance reports, annual calibration support, and 5-year data retention."
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"Do I own the monitoring hardware?","acceptedAnswer":{"@type":"Answer","text":"No. Sentry Compliance owns and maintains the installed monitoring equipment. Your subscription covers hardware, monitoring, maintenance, reporting, and support. If the service ends, the equipment is retrieved."}},
-      {"@type":"Question","name":"What happens if my pharmacy internet goes down?","acceptedAnswer":{"@type":"Answer","text":"The monitoring gateway uses a cellular connection, so it does not rely on your pharmacy WiFi or local router. This helps reduce monitoring gaps caused by internet changes or outages."}},
-      {"@type":"Question","name":"What temperature range do you monitor?","acceptedAnswer":{"@type":"Answer","text":"For vaccine cold chain monitoring, sensors are generally configured around the +2 degrees Celsius to +8 degrees Celsius range, with alert thresholds set to suit the pharmacy's requirements. Thresholds can be configured based on the storage requirement of the products being monitored."}},
-      {"@type":"Question","name":"How quickly will we be alerted?","acceptedAnswer":{"@type":"Answer","text":"Alerts are sent quickly after a configured threshold breach is detected. The service can escalate to a secondary contact if the first contact does not acknowledge the alert."}},
-      {"@type":"Question","name":"Is the report TGA approved?","acceptedAnswer":{"@type":"Answer","text":"The report is not TGA approved and should not be described that way. It is designed to support TGA-aligned cold chain compliance evidence by documenting readings, alerts, response events, uptime, and calibration status."}},
-      {"@type":"Question","name":"How long does installation take?","acceptedAnswer":{"@type":"Answer","text":"A standard pharmacy installation usually takes 2 to 3 hours. Monitoring can typically go live the same day."}},
-      {"@type":"Question","name":"Can this support more than one pharmacy?","acceptedAnswer":{"@type":"Answer","text":"Yes. Multi-site owners can receive separate site reports and consolidated support. Multi-site pricing is available."}},
-      {"@type":"Question","name":"Does this replace our legal or professional responsibility?","acceptedAnswer":{"@type":"Answer","text":"No. The service provides monitoring, alerting, reporting, and calibration support. Pharmacy owners and pharmacists remain responsible for meeting all applicable obligations."}}
-    ]
-  }
-  </script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a href="#top" class="brand" aria-label="Sentry Compliance home">
-        <span class="brand-mark">S</span>
-        <span><span>SENTRY</span> COMPLIANCE</span>
-      </a>
-      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
-        <a href="#risk">The Risk</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#what-you-get">What You Get</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-cta" href="#contact">Book Free Audit</a>
-      </nav>
+<!--
+  ================================================================
+  RECOMMENDED SERVER SECURITY HEADERS (apply at hosting/CDN level)
+  Static HTML cannot enforce these — add via DreamHost .htaccess
+  ================================================================
+  Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'self'; form-action 'self' mailto:;
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
+  ================================================================
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentry Compliance | Pharmacy Cold Chain Monitoring Melbourne</title>
+<meta name="description" content="Sentry Compliance provides TGA-aligned cold chain monitoring for Melbourne pharmacies. 24/7 temperature alerts, monthly compliance reports, annual calibration support, and audit-ready documentation. Book a free compliance audit.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sentrycompliance.com.au/">
+<!-- Open Graph -->
+<meta property="og:title" content="Sentry Compliance | Pharmacy Cold Chain Monitoring Melbourne">
+<meta property="og:description" content="TGA-aligned cold chain monitoring for independent Melbourne pharmacies. 24/7 alerts, monthly compliance reports, annual calibration. Book a free compliance audit.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sentrycompliance.com.au/">
+<meta property="og:site_name" content="Sentry Compliance">
+<meta property="og:locale" content="en_AU">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sentry Compliance | Pharmacy Cold Chain Monitoring Melbourne">
+<meta name="twitter:description" content="TGA-aligned cold chain monitoring for independent Melbourne pharmacies. Book a free compliance audit.">
+<!-- Google Fonts — only external dependency -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"LocalBusiness","@id":"https://sentrycompliance.com.au/#business",
+"name":"Sentry Compliance Pty Ltd","url":"https://sentrycompliance.com.au",
+"telephone":"[ADD PHONE NUMBER]","email":"[ADD EMAIL]",
+"description":"Fully managed cold chain temperature monitoring for independent Melbourne pharmacies. TGA-aligned compliance reports, 24/7 cellular alerts, annual calibration, 5-year data retention.",
+"address":{"@type":"PostalAddress","addressLocality":"Melbourne","addressRegion":"VIC","addressCountry":"AU"},
+"areaServed":{"@type":"City","name":"Melbourne"},
+"additionalProperty":{"@type":"PropertyValue","name":"ABN","value":"[ADD ABN]"},
+"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"}},
+{"@type":"Service","@id":"https://sentrycompliance.com.au/#service",
+"name":"TGA-Aligned Pharmacy Cold Chain Monitoring",
+"provider":{"@id":"https://sentrycompliance.com.au/#business"},
+"serviceType":"Pharmacy Cold Chain Compliance Monitoring",
+"description":"Continuous temperature monitoring, SMS/email alerts, monthly compliance reporting, annual calibration support, and 5-year data retention for Melbourne pharmacies.",
+"audience":{"@type":"Audience","audienceType":"Independent pharmacy owners and pharmacists-in-charge"},
+"areaServed":{"@type":"City","name":"Melbourne"},
+"hasOfferCatalog":{"@type":"OfferCatalog","name":"Monitoring Service Packages","itemListElement":[
+{"@type":"Offer","name":"Standard Package — 1–2 cold storage units","price":"195","priceCurrency":"AUD","description":"Starting from $195/month plus $895 one-time installation"},
+{"@type":"Offer","name":"Extended Package — 3–4 cold storage units","price":"275","priceCurrency":"AUD","description":"Starting from $275/month plus $1,395 one-time installation"}]}},
+{"@type":"FAQPage","@id":"https://sentrycompliance.com.au/#faq","mainEntity":[
+{"@type":"Question","name":"Do I own the monitoring hardware?","acceptedAnswer":{"@type":"Answer","text":"No. Sentry Compliance owns and maintains the installed monitoring equipment. Your subscription covers hardware, monitoring, maintenance, reporting, and support. If the service ends, the equipment is retrieved."}},
+{"@type":"Question","name":"What happens if my pharmacy internet goes down?","acceptedAnswer":{"@type":"Answer","text":"The monitoring gateway uses a cellular connection, so it does not rely on your pharmacy WiFi or local router. This helps reduce monitoring gaps caused by internet changes or outages."}},
+{"@type":"Question","name":"What temperature range do you monitor?","acceptedAnswer":{"@type":"Answer","text":"For vaccine cold chain monitoring, sensors are generally configured around the +2 to +8 degree Celsius range, with alert thresholds set to suit the pharmacy requirements."}},
+{"@type":"Question","name":"How quickly will we be alerted?","acceptedAnswer":{"@type":"Answer","text":"Alerts are sent quickly after a configured threshold breach is detected. The service can escalate to a secondary contact if the first contact does not acknowledge the alert."}},
+{"@type":"Question","name":"Is the report TGA approved?","acceptedAnswer":{"@type":"Answer","text":"The report is not TGA approved. It is designed to support TGA-aligned cold chain compliance evidence by documenting readings, alerts, response events, uptime, and calibration status."}},
+{"@type":"Question","name":"How long does installation take?","acceptedAnswer":{"@type":"Answer","text":"A standard pharmacy installation usually takes 2 to 3 hours. Monitoring can typically go live the same day."}},
+{"@type":"Question","name":"Can this support more than one pharmacy?","acceptedAnswer":{"@type":"Answer","text":"Yes. Multi-site owners can receive separate site reports and consolidated support. Multi-site pricing is available."}},
+{"@type":"Question","name":"Does this replace our legal or professional responsibility?","acceptedAnswer":{"@type":"Answer","text":"No. The service provides monitoring, alerting, reporting, and calibration support. Pharmacy owners and pharmacists remain responsible for meeting all applicable regulatory, clinical, and professional obligations."}}
+]}]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0B1929;--navy2:#132338;--charcoal:#07111F;
+  --amber:#D4A017;--amber2:#B8870F;
+  --light:#F6F7F9;--white:#FFFFFF;
+  --lt:#F0F4F8;--muted:#8FA8C0;--dark:#142033;
+  --border:#D9DEE5;--bd:#1E3350;
+  --green:#3DAA72;--red:#C94040;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Barlow',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);background:var(--light);color:var(--dark);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}html{scroll-behavior:auto}.fade{opacity:1!important;transform:none!important}}
+.eyebrow{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:.875rem;display:flex;align-items:center;gap:.75rem}
+.eyebrow::before{content:'';width:2rem;height:1px;background:var(--amber);flex-shrink:0}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.2}
+h1{font-size:clamp(2rem,5vw,3.4rem)}
+h2{font-size:clamp(1.7rem,3.5vw,2.6rem)}
+h3{font-size:clamp(1.05rem,2vw,1.35rem)}
+h4{font-size:1rem;font-weight:600}
+p{font-size:1rem;line-height:1.75}
+.wrap{max-width:1160px;margin:0 auto;padding:0 1.5rem}
+.pad{padding:5rem 0}
+.pad-lg{padding:7rem 0}
+.fade{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fade.in{opacity:1;transform:none}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:.9rem 1.75rem;border-radius:2px;border:none;cursor:pointer;transition:background .2s,color .2s,transform .15s}
+.btn:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.btn:hover{transform:translateY(-1px)}
+.btn-amber{background:var(--amber);color:var(--navy)}
+.btn-amber:hover{background:var(--amber2)}
+.btn-ghost{background:transparent;color:var(--lt);border:1px solid rgba(240,244,248,.28)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy);border-bottom:1px solid var(--amber);height:64px}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1160px;margin:0 auto;padding:0 1.5rem}
+.logo{font-family:var(--sans);font-size:1rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--lt)}
+.logo span{color:var(--amber)}
+.nav-links{display:flex;align-items:center;gap:1.75rem}
+.nav-links a{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--lt)}
+.nav-links a:focus-visible,.btn:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:1px}
+.nav-cta{margin-left:1rem;font-size:.72rem!important;padding:.6rem 1.2rem!important}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.burger:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+.burger span{display:block;width:24px;height:2px;background:var(--lt);transition:transform .3s,opacity .3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--charcoal);border-bottom:1px solid var(--bd);padding:1.5rem;z-index:999;flex-direction:column}
+.mob-menu.open{display:flex}
+.mob-menu a{display:block;padding:.875rem 0;font-size:.85rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--bd);transition:color .2s}
+.mob-menu a:hover{color:var(--lt)}
+.mob-menu .btn{margin-top:1.25rem;width:100%;justify-content:center}
+/* HERO */
+#hero{background:var(--navy);padding:8.5rem 0 6rem;position:relative;overflow:hidden;margin-top:64px}
+#hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(212,160,23,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(212,160,23,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+#hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--amber),transparent)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.hero-pre{font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:1.25rem;display:flex;align-items:center;gap:.75rem}
+.hero-pre::before{content:'';width:2.5rem;height:1px;background:var(--amber)}
+#hero h1{color:var(--lt);margin-bottom:1.25rem;font-style:italic}
+.hero-sub{font-size:1.04rem;color:var(--muted);line-height:1.8;margin-bottom:2rem;max-width:540px}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:.625rem}
+.hero-micro{font-size:.76rem;color:var(--muted)}
+.badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
+.badge{display:inline-flex;align-items:center;gap:.4rem;font-size:.7rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding:.4rem .875rem;border:1px solid var(--bd);border-radius:2px}
+.badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0}
+/* DASHBOARD MOCKUP */
+.dashboard{background:var(--charcoal);border:1px solid var(--bd);border-top:2px solid var(--amber);border-radius:4px;overflow:hidden;font-family:var(--sans)}
+.db-hd{background:var(--navy);padding:.875rem 1.25rem;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--bd)}
+.db-site{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lt)}
+.db-site span{display:block;font-size:.6rem;color:var(--muted);font-weight:400;letter-spacing:.06em;margin-top:.15rem;text-transform:none}
+.db-live{display:flex;align-items:center;gap:.4rem;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);white-space:nowrap;margin-top:.1rem}
+.db-live::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.db-body{padding:.875rem 1.25rem}
+.db-section-title{font-size:.58rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:.625rem 0 .375rem}
+.db-row{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;border-bottom:1px solid rgba(30,51,80,.55);font-size:.76rem}
+.db-row:last-of-type{border-bottom:none}
+.db-lbl{color:var(--muted);font-weight:500}
+.db-val{font-weight:700;letter-spacing:.03em;display:flex;align-items:center;gap:.375rem}
+.db-val.ok{color:var(--green)}
+.db-val.am{color:var(--amber)}
+.db-val.fr{color:#7EC8E3}
+.dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;display:inline-block}
+.dot-ok{background:var(--green)}
+.dot-am{background:var(--amber)}
+.dot-fr{background:#7EC8E3}
+.db-divider{height:1px;background:var(--bd);margin:.625rem 0}
+/* SVG Chart */
+.db-chart-wrap{background:rgba(11,25,41,.5);border:1px solid var(--bd);border-radius:2px;padding:.625rem .5rem .375rem;margin:.625rem 0}
+.chart-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.25rem}
+.chart-lbl{font-size:.58rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.chart-range{font-size:.58rem;color:var(--amber);font-weight:600}
+.db-ft{background:rgba(11,25,41,.4);padding:.625rem 1.25rem;border-top:1px solid var(--bd);display:flex;justify-content:space-between;font-size:.6rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+/* AI ANSWER BLOCK */
+#what-we-do{background:var(--white);border-top:1px solid var(--border)}
+.intro-text{font-size:1.05rem;color:#4A6070;max-width:780px;line-height:1.85;margin-bottom:2rem}
+.answer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+.ab{background:var(--light);border:1px solid var(--border);border-left:3px solid var(--amber);padding:1.1rem 1.25rem;border-radius:2px}
+.ab h4{font-family:var(--sans);font-size:.64rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);margin-bottom:.4rem}
+.ab p{font-size:.82rem;color:var(--dark);line-height:1.6}
+/* RISK */
+#risk{background:var(--light)}
+.risk-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.risk-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--amber);padding:2rem;border-radius:2px}
+.risk-card h3{color:var(--dark);margin-bottom:.75rem}
+.risk-card p{font-size:.93rem;color:#4A6070;line-height:1.75}
+/* WHY IT MATTERS */
+#why-it-matters{background:var(--white)}
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:2.5rem}
+.comp-copy p{font-size:1.04rem;color:#4A6070;line-height:1.85;margin-bottom:1.25rem}
+.pull{font-style:italic;color:var(--dark);border-left:2px solid var(--amber);padding-left:1.25rem;margin-top:1.75rem}
+.ev-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.ev{background:var(--light);border:1px solid var(--border);border-left:3px solid var(--amber);padding:1.1rem 1.25rem;border-radius:2px}
+.ev h4{font-family:var(--sans);font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:.3rem}
+.ev p{font-size:.82rem;color:var(--dark);line-height:1.55}
+/* HOW IT WORKS */
+#how-it-works{background:var(--light)}
+.steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3.5rem;position:relative}
+.steps-row::before{content:'';position:absolute;top:2.25rem;left:calc(16.66% + 1rem);right:calc(16.66% + 1rem);height:1px;background:linear-gradient(90deg,var(--amber),rgba(212,160,23,.15))}
+.step{background:var(--white);border:1px solid var(--border);padding:2.25rem 1.75rem 1.75rem;border-radius:2px;position:relative}
+.step-n{position:absolute;top:-1.4rem;left:1.75rem;width:2.8rem;height:2.8rem;background:var(--amber);color:var(--navy);font-family:var(--serif);font-size:1.3rem;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:2px}
+.step h3{color:var(--dark);margin-bottom:.6rem;margin-top:.375rem}
+.step p{font-size:.91rem;color:#4A6070;line-height:1.75}
+/* Workflow diagram */
+.diagram{margin-top:3.5rem;background:var(--navy);border:1px solid var(--bd);border-radius:4px;padding:2rem;overflow-x:auto}
+.diag-title{font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:1.5rem;text-align:center}
+.flow{display:flex;align-items:flex-start;justify-content:center;gap:0;min-width:560px}
+.fn{display:flex;flex-direction:column;align-items:center;gap:.4rem;flex:1;min-width:0;padding:0 .25rem}
+.fi{width:50px;height:50px;border:1px solid var(--bd);border-top:2px solid var(--amber);background:var(--navy2);border-radius:4px;display:flex;align-items:center;justify-content:center;margin:0 auto}
+.fi svg{width:20px;height:20px}
+.fl{font-size:.65rem;font-weight:700;color:var(--lt);text-align:center;letter-spacing:.03em;line-height:1.4}
+.fs{font-size:.57rem;color:var(--muted);text-align:center;line-height:1.3}
+.fa{flex-shrink:0;width:1.75rem;display:flex;align-items:center;justify-content:center;color:var(--amber);font-size:1rem;margin-top:1rem}
+/* WHAT YOU GET */
+#what-you-get{background:var(--navy);position:relative;overflow:hidden}
+#what-you-get::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(212,160,23,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(212,160,23,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.feat{background:var(--navy2);border:1px solid var(--bd);border-top:2px solid var(--amber);padding:1.75rem;border-radius:2px}
+.feat-n{font-size:.6rem;font-weight:700;letter-spacing:.2em;color:var(--amber);margin-bottom:.625rem}
+.feat h3{color:var(--lt);font-size:1.1rem;margin-bottom:.6rem}
+.feat p{font-size:.88rem;color:var(--muted);line-height:1.7}
+/* ALERTS */
+#alerts{background:var(--light)}
+.alerts-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2.5rem;align-items:start}
+.phone-wrap{display:flex;justify-content:center;padding:1rem 0}
+.phone{width:230px;background:#1a1a1a;border-radius:28px;padding:9px;box-shadow:0 20px 48px rgba(0,0,0,.3);border:1px solid #2a2a2a}
+.p-screen{background:#000;border-radius:20px;overflow:hidden}
+.p-status{background:#111;display:flex;justify-content:space-between;padding:.3rem .75rem;font-size:.58rem;color:#777;font-weight:600}
+.p-sms-hd{background:#1c1c1e;padding:.625rem .75rem;border-bottom:1px solid #2c2c2e;text-align:center}
+.p-sms-name{font-size:.7rem;font-weight:700;color:#fff}
+.p-sms-info{font-size:.58rem;color:#8e8e93}
+.p-body{padding:.625rem .75rem;display:flex;flex-direction:column;gap:.4rem;background:#000;min-height:220px}
+.p-time{font-size:.52rem;color:#636366;text-align:center}
+.sms-b{border-radius:14px;padding:.55rem .75rem;font-size:.64rem;line-height:1.5;font-weight:500;max-width:88%}
+.sms-b.alert{background:#C94040;color:#fff;border-radius:14px 14px 14px 3px}
+.sms-b.reply{background:#1c1c1e;border:1px solid #2c2c2e;color:#e5e5ea;border-radius:14px 14px 3px 14px;margin-left:auto}
+.p-home{height:24px;background:#111;display:flex;align-items:center;justify-content:center}
+.p-home::before{content:'';width:70px;height:3px;background:#333;border-radius:3px}
+/* Email card */
+.email-card{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden;box-shadow:0 6px 20px rgba(11,25,41,.08)}
+.e-toolbar{background:#f5f5f5;padding:.4rem .75rem;display:flex;gap:.3rem;align-items:center;border-bottom:1px solid var(--border)}
+.e-dot{width:10px;height:10px;border-radius:50%}
+.e-hd{padding:.875rem 1.1rem;border-bottom:1px solid var(--border)}
+.e-from{font-size:.68rem;color:#666;margin-bottom:.15rem}
+.e-from strong{color:var(--dark)}
+.e-subj{font-size:.82rem;font-weight:700;color:var(--dark)}
+.e-body{padding:1.1rem}
+.e-banner{background:#FFF3CD;border-left:3px solid var(--amber);padding:.6rem .875rem;margin-bottom:.875rem;border-radius:2px}
+.e-banner p{font-size:.75rem;font-weight:700;color:#856404}
+.e-field{display:flex;justify-content:space-between;padding:.3rem 0;border-bottom:1px solid #f0f0f0;font-size:.74rem}
+.e-field:last-of-type{border-bottom:none}
+.e-fl{color:#666}
+.e-fv{font-weight:600;color:var(--dark)}
+.e-fv.red{color:var(--red)}
+.e-action{margin-top:.875rem;text-align:center}
+.e-btn{display:inline-block;background:var(--amber);color:var(--navy);font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.45rem 1.1rem;border-radius:2px}
+/* Escalation */
+.escalation{margin-top:2.5rem;background:var(--navy);border:1px solid var(--bd);border-top:2px solid var(--amber);border-radius:4px;padding:1.75rem}
+.esc-title{font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:1.25rem;text-align:center}
+.esc-flow{display:flex;align-items:flex-start;justify-content:center;gap:0;overflow-x:auto;padding-bottom:.25rem}
+.esc-step{display:flex;flex-direction:column;align-items:center;gap:.375rem;min-width:100px;padding:0 .25rem}
+.esc-icon{width:38px;height:38px;border:1px solid var(--bd);background:var(--navy2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:var(--amber)}
+.esc-lbl{font-size:.63rem;font-weight:600;color:var(--lt);text-align:center;line-height:1.35}
+.esc-sub{font-size:.57rem;color:var(--muted);text-align:center;line-height:1.3}
+.esc-arr{color:var(--amber);font-size:1rem;flex-shrink:0;padding:0 .1rem;margin-top:.875rem}
+/* REPORT */
+#the-report{background:var(--navy);position:relative;overflow:hidden}
+#the-report::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(212,160,23,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(212,160,23,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.report-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:3.5rem;align-items:start;margin-top:2.5rem}
+.report-copy p{font-size:1.04rem;color:var(--muted);line-height:1.85;margin-bottom:1.25rem}
+.rep-list{margin-top:1.25rem}
+.rep-list li{display:flex;align-items:flex-start;gap:.625rem;font-size:.91rem;color:var(--lt);padding:.5rem 0;border-bottom:1px solid var(--bd)}
+.rep-list li:last-child{border-bottom:none}
+.rep-list li::before{content:'';width:12px;height:12px;background:var(--amber);border-radius:50%;flex-shrink:0;margin-top:4px}
+.pdf-wrap{position:relative;z-index:1}
+.pdf-outer{background:var(--charcoal);border-radius:4px;padding:.5rem;box-shadow:0 28px 56px rgba(0,0,0,.45)}
+.pdf{background:var(--white);border-radius:2px;overflow:hidden}
+.pdf-hd{background:var(--navy);padding:1rem 1.25rem;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--amber)}
+.pdf-hd-title{font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber)}
+.pdf-hd-sub{font-size:.58rem;color:var(--muted);margin-top:.15rem}
+.pdf-logo{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--lt)}
+.pdf-logo span{color:var(--amber)}
+.pdf-body{padding:1.1rem 1.25rem}
+.pdf-meta{display:grid;grid-template-columns:1fr 1fr;gap:.625rem;margin-bottom:.875rem}
+.pm label{display:block;font-size:.54rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#999;margin-bottom:.1rem}
+.pm p{font-size:.72rem;color:var(--dark);font-weight:600}
+.pdf-sec{font-size:.58rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);margin:.75rem 0 .375rem;padding-bottom:.3rem;border-bottom:1px solid var(--border)}
+.pdf-tbl{width:100%;border-collapse:collapse;font-size:.7rem;margin-bottom:.75rem}
+.pdf-tbl th{background:#f5f5f5;color:#555;font-weight:700;text-transform:uppercase;letter-spacing:.07em;font-size:.56rem;padding:.35rem .5rem;border:1px solid var(--border);text-align:left}
+.pdf-tbl td{padding:.35rem .5rem;border:1px solid var(--border);color:var(--dark)}
+.pdf-tbl tr:nth-child(even) td{background:#fafafa}
+.pdf-sr{display:flex;justify-content:space-between;align-items:center;padding:.35rem 0;border-bottom:1px solid #f0f0f0;font-size:.7rem}
+.pdf-sr:last-child{border-bottom:none}
+.pdf-sl{color:#555}
+.pdf-sv{font-weight:700;color:var(--dark)}
+.pdf-sv.ok{color:#2e7d4f}
+.pdf-sv.am{color:#8B6914}
+.pdf-ft{background:#f5f5f5;padding:.625rem 1.25rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.pdf-ft p{font-size:.56rem;color:#888;letter-spacing:.05em}
+/* PRICING */
+#pricing{background:var(--light)}
+.price-cards{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:860px;margin-top:2.5rem}
+.pc{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.pc.feat-pc{border-color:var(--amber);box-shadow:0 0 0 1px var(--amber)}
+.pc-hd{background:var(--navy);padding:1.75rem 2rem 1.5rem;position:relative}
+.pc.feat-pc .pc-hd{background:var(--charcoal)}
+.pc-badge{position:absolute;top:1rem;right:1rem;background:var(--amber);color:var(--navy);font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .65rem;border-radius:2px}
+.pc-tier{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:.4rem}
+.pc-hd h3{color:var(--lt);font-size:1.4rem;margin-bottom:.25rem}
+.pc-for{font-size:.8rem;color:var(--muted)}
+.pc-body{padding:1.75rem}
+.pc-line{display:flex;justify-content:space-between;align-items:baseline;padding:.55rem 0;border-bottom:1px solid var(--border);font-size:.88rem}
+.pc-line:last-of-type{border-bottom:none}
+.pc-ll{color:#4A6070}
+.pc-lv{font-weight:700;color:var(--dark)}
+.pc-lv span{font-size:.72rem;font-weight:400;color:var(--muted)}
+.pc-incl{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border)}
+.pc-incl h4{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.625rem}
+.pc-incl li{display:flex;align-items:center;gap:.5rem;font-size:.84rem;color:var(--dark);padding:.22rem 0}
+.pc-incl li::before{content:'✓';color:var(--amber);font-weight:700;flex-shrink:0}
+.price-note{margin-top:1.5rem;font-size:.82rem;color:#4A6070;line-height:1.75;max-width:860px}
+.price-cta{margin-top:2.25rem;display:flex;flex-direction:column;align-items:flex-start;gap:.5rem}
+.micro{font-size:.75rem;color:var(--muted)}
+/* WHY SENTRY */
+#why-sentry{background:var(--navy);position:relative;overflow:hidden}
+#why-sentry::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(212,160,23,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(212,160,23,.03) 1px,transparent 1px);background-size:64px 64px;pointer-events:none}
+.why-intro{font-size:1.04rem;color:var(--muted);max-width:680px;line-height:1.8;margin-bottom:2.5rem}
+.trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-bottom:1.25rem}
+.tc{background:var(--navy2);border:1px solid var(--bd);padding:1.75rem;border-radius:2px}
+.tc-n{font-size:.62rem;font-weight:700;letter-spacing:.2em;color:var(--amber);margin-bottom:.625rem}
+.tc h3{color:var(--lt);font-size:1.15rem;margin-bottom:.625rem}
+.tc p{font-size:.88rem;color:var(--muted);line-height:1.7}
+.ins-card{background:rgba(212,160,23,.05);border:1px solid rgba(212,160,23,.2);border-radius:2px;padding:1rem 1.5rem;display:flex;align-items:center;gap:.875rem}
+.ins-card p{font-size:.86rem;color:var(--muted);line-height:1.6}
+/* FREE AUDIT */
+#free-audit{background:var(--light)}
+.audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;margin-top:2.5rem}
+.checklist li{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem 0;border-bottom:1px solid var(--border);font-size:.91rem;color:var(--dark);line-height:1.55}
+.checklist li:last-child{border-bottom:none}
+.chk{width:19px;height:19px;background:var(--amber);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--navy);font-weight:900;margin-top:1px}
+.audit-panel{background:var(--navy);border:1px solid var(--bd);border-top:2px solid var(--amber);padding:2.25rem;border-radius:2px}
+.audit-panel h3{color:var(--lt);font-size:1.45rem;margin-bottom:.875rem}
+.audit-panel p{font-size:.91rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem}
+.audit-panel .btn{width:100%;justify-content:center}
+.audit-panel .micro{display:block;text-align:center;margin-top:.625rem}
+/* FAQ */
+#faq{background:var(--white)}
+.faq-list{max-width:760px;margin-top:2.5rem}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:1.25rem 0;display:flex;justify-content:space-between;align-items:center;gap:1rem;cursor:pointer;font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--dark);transition:color .2s}
+.faq-q:hover,.faq-q[aria-expanded=true]{color:var(--amber)}
+.faq-q:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:1px}
+.faq-icon{width:22px;height:22px;border:1px solid var(--border);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.95rem;color:var(--muted);transition:transform .25s,border-color .2s,color .2s}
+.faq-q[aria-expanded=true] .faq-icon{transform:rotate(45deg);border-color:var(--amber);color:var(--amber)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding-bottom:1.25rem;font-size:.91rem;color:#4A6070;line-height:1.8}
+/* CONTACT */
+#contact{background:var(--navy);position:relative;overflow:hidden}
+#contact::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(212,160,23,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(212,160,23,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.contact-sub{font-size:1rem;color:var(--muted);max-width:540px;line-height:1.75;margin-bottom:2.5rem}
+.contact-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:2.5rem;align-items:start}
+.form-box{background:var(--navy2);border:1px solid var(--bd);border-top:2px solid var(--amber);padding:2.25rem;border-radius:2px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{margin-bottom:1rem}
+.fg label{display:block;font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
+.fg input,.fg select,.fg textarea{width:100%;background:rgba(11,25,41,.6);border:1px solid var(--bd);color:var(--lt);font-family:var(--sans);font-size:.875rem;padding:.675rem .875rem;border-radius:2px;outline:none;transition:border-color .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--amber)}
+.fg input:focus-visible,.fg select:focus-visible,.fg textarea:focus-visible{outline:2px solid var(--amber);outline-offset:0}
+.fg select option{background:var(--navy2)}
+.fg textarea{resize:vertical;min-height:80px}
+.privacy-note{font-size:.72rem;color:var(--muted);line-height:1.65;padding:.75rem .875rem;background:rgba(212,160,23,.05);border:1px solid rgba(212,160,23,.15);border-radius:2px;margin-bottom:1rem}
+.privacy-note strong{color:var(--amber);display:block;margin-bottom:.2rem}
+.form-submit{width:100%;justify-content:center;padding:.9rem;font-size:.84rem}
+.form-note{font-size:.7rem;color:var(--muted);text-align:center;margin-top:.5rem;line-height:1.6}
+.contact-aside{display:flex;flex-direction:column;gap:1.5rem}
+.contact-card{background:var(--navy2);border:1px solid var(--bd);padding:1.75rem;border-radius:2px}
+.contact-card h3{color:var(--lt);font-size:1.2rem;margin-bottom:1.25rem;padding-bottom:.875rem;border-bottom:1px solid var(--bd)}
+.cd{margin-bottom:.875rem}
+.cd-l{font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);margin-bottom:.2rem}
+.cd-v{font-size:.88rem;color:var(--lt)}
+/* Mobile app mockup */
+.mob-wrap{display:flex;justify-content:center;padding:.5rem 0}
+.mob-phone{width:195px;background:#1a1a1a;border-radius:24px;padding:8px;box-shadow:0 16px 40px rgba(0,0,0,.35);border:1px solid #2a2a2a}
+.mob-screen{background:var(--charcoal);border-radius:18px;overflow:hidden}
+.mob-sb{background:var(--navy);padding:.75rem .75rem .5rem;border-bottom:1px solid var(--bd)}
+.mob-sb-title{font-size:.7rem;font-weight:700;color:var(--lt);letter-spacing:.06em}
+.mob-sb-site{font-size:.58rem;color:var(--amber);font-weight:600;margin-top:.1rem}
+.mob-row{display:flex;justify-content:space-between;align-items:center;padding:.5rem .75rem;border-bottom:1px solid rgba(30,51,80,.5)}
+.mob-dev{font-size:.6rem;color:var(--muted);font-weight:500}
+.mob-temp{font-size:.65rem;font-weight:700;display:flex;align-items:center;gap:.3rem}
+.mob-temp.ok{color:var(--green)}
+.mob-stamp{font-size:.54rem;color:var(--muted);padding:.35rem .75rem;text-align:right}
+.mob-btns{padding:.5rem .75rem .875rem;display:flex;flex-direction:column;gap:.375rem}
+.mob-btn{display:block;text-align:center;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.4rem;border-radius:2px}
+.mob-btn.primary{background:var(--amber);color:var(--navy)}
+.mob-btn.outline{border:1px solid var(--bd);color:var(--muted)}
+.mob-home{height:22px;background:var(--charcoal);display:flex;align-items:center;justify-content:center}
+.mob-home::before{content:'';width:55px;height:3px;background:#333;border-radius:3px}
+/* FOOTER */
+footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 2rem}
+.ft-grid{display:grid;grid-template-columns:1fr auto;gap:3rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--bd);align-items:start}
+.ft-tag{font-size:.8rem;color:var(--muted);line-height:1.65;margin-top:.5rem}
+.ft-abn{font-size:.7rem;color:var(--muted);margin-top:.3rem}
+.ft-links{display:flex;gap:1.75rem;align-items:center}
+.ft-links a{font-size:.75rem;color:var(--muted);transition:color .2s}
+.ft-links a:hover{color:var(--amber)}
+.ft-links a:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:1px}
+.ft-bottom{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap}
+.ft-disc{font-size:.72rem;color:var(--muted);line-height:1.7;max-width:640px}
+.ft-copy{font-size:.72rem;color:var(--muted);white-space:nowrap}
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-grid,.comp-grid,.report-layout,.audit-grid,.contact-layout{grid-template-columns:1fr;gap:2.5rem}
+  .answer-grid{grid-template-columns:repeat(2,1fr)}
+  .alerts-grid{grid-template-columns:1fr;gap:2rem}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  .pad{padding:3.5rem 0}.pad-lg{padding:5rem 0}
+  .risk-cards,.feat-grid,.trust-grid,.ev-grid,.answer-grid{grid-template-columns:1fr}
+  .steps-row{grid-template-columns:1fr}
+  .steps-row::before{display:none}
+  .price-cards{grid-template-columns:1fr;max-width:480px}
+  .form-row{grid-template-columns:1fr}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas .btn{width:100%;justify-content:center}
+  .ft-grid{grid-template-columns:1fr;gap:1.5rem}
+  .ft-bottom{flex-direction:column}
+  .flow{min-width:500px}
+}
+</style>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-in">
+    <a href="#hero" class="logo"><span>SENTRY</span> COMPLIANCE</a>
+    <div class="nav-links" role="menubar">
+      <a href="#risk" role="menuitem">The Risk</a>
+      <a href="#how-it-works" role="menuitem">How It Works</a>
+      <a href="#what-you-get" role="menuitem">What You Get</a>
+      <a href="#pricing" role="menuitem">Pricing</a>
+      <a href="#faq" role="menuitem">FAQ</a>
+      <a href="#contact" role="menuitem">Contact</a>
     </div>
-  </header>
+    <a href="#contact" class="btn btn-amber nav-cta">Book Free Audit</a>
+    <button class="burger" id="burger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mob-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mob-menu" id="mob-menu" role="dialog" aria-label="Mobile navigation">
+  <a href="#risk" class="mob-link">The Risk</a>
+  <a href="#how-it-works" class="mob-link">How It Works</a>
+  <a href="#what-you-get" class="mob-link">What You Get</a>
+  <a href="#pricing" class="mob-link">Pricing</a>
+  <a href="#faq" class="mob-link">FAQ</a>
+  <a href="#contact" class="mob-link">Contact</a>
+  <a href="#contact" class="btn btn-amber">Book Free Audit</a>
+</div>
 
-  <main id="main">
-    <section id="top" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy fade-in">
-          <p class="eyebrow">TGA-aligned cold chain monitoring for Melbourne pharmacies</p>
-          <h1>If Your Vaccine Fridge Failed Tonight, Would You Know Before Monday Morning?</h1>
-          <p class="lead">Sentry Compliance installs and manages continuous cold chain monitoring for independent Melbourne pharmacies. 24/7 alerts, monthly compliance reports, annual calibration, and audit-ready documentation &mdash; without relying on your pharmacy WiFi.</p>
-          <div class="cta-row">
-            <a class="btn" href="#contact">Book Your Free Compliance Audit</a>
-            <a class="btn secondary" href="#how-it-works">See How It Works</a>
-          </div>
-          <p class="microcopy">No obligation. Melbourne pharmacies only during initial rollout.</p>
-          <ul class="trust-row" aria-label="Service highlights">
-            <li>Melbourne Based</li>
-            <li>Cellular Monitoring</li>
-            <li>Monthly Compliance Reports</li>
-            <li>Annual Calibration Support</li>
-          </ul>
-        </div>
-        <aside class="monitor-panel fade-in" aria-label="Monitoring status example">
-          <div class="panel-top">
-            <span>Live cold storage status</span>
-            <span class="status-dot">Monitoring Active</span>
-          </div>
-          <div class="readings">
-            <div class="reading">
-              <div><strong>Fridge 1</strong><br><span class="normal">Normal</span></div>
-              <span class="temp">+4.7&deg;C</span>
-            </div>
-            <div class="reading">
-              <div><strong>Fridge 2</strong><br><span class="normal">Normal</span></div>
-              <span class="temp">+5.1&deg;C</span>
-            </div>
-          </div>
-          <div class="panel-meta">
-            <div><span>Reporting interval</span><span>10 minutes</span></div>
-            <div><span>Next report</span><span>1st of next month</span></div>
-            <div><span>Status</span><span>Monitoring Active</span></div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="risk">
-      <div class="container">
-        <div class="section-head fade-in">
-          <p class="eyebrow">The Risk</p>
-          <h2>Manual Logs Leave Dangerous Gaps</h2>
-          <p class="section-intro">Most pharmacies work hard to maintain vaccine cold chain records. The problem is that manual checks and basic loggers often fail at the exact time you need them most &mdash; overnight, on weekends, during public holidays, or when no one is watching the fridge.</p>
-        </div>
-        <div class="cards-grid">
-          <article class="card fade-in">
-            <h3>The Weekend Gap</h3>
-            <p>A manual logbook may show a Friday afternoon reading and a Monday morning reading, but it cannot prove what happened during the 60+ hours in between.</p>
-          </article>
-          <article class="card fade-in">
-            <h3>No Alert, No Action</h3>
-            <p>If a fridge compressor fails at 2am, a paper logbook cannot notify anyone. By the time staff arrive, vaccines may already need to be quarantined and assessed.</p>
-          </article>
-          <article class="card fade-in">
-            <h3>Weak Audit Evidence</h3>
-            <p>Temperature data without calibration records, alert history, and response evidence may not give you the documentation needed during an audit, accreditation review, or insurance question.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="compliance-context">
-      <div class="container">
-        <div class="section-head fade-in">
-          <p class="eyebrow">Why It Matters</p>
-          <h2>Cold Chain Compliance Is an Operational Risk, Not an Admin Task</h2>
-          <p class="section-intro">Australian vaccine cold chain guidance is built around keeping vaccines within the recommended +2&deg;C to +8&deg;C range, with +5&deg;C as the target midpoint under "Strive for 5". Sentry Compliance is designed around the +2&deg;C to +8&deg;C vaccine cold chain range and supports National Vaccine Storage Guidelines 'Strive for 5' requirements. When monitoring is manual, disconnected, or uncalibrated, the risk is not just product loss &mdash; it is incomplete evidence.</p>
-        </div>
-        <div class="evidence-band fade-in" aria-label="Cold chain evidence points">
-          <div class="evidence-item"><span></span><strong>Temperature records</strong></div>
-          <div class="evidence-item"><span></span><strong>Excursion alerts</strong></div>
-          <div class="evidence-item"><span></span><strong>Response history</strong></div>
-          <div class="evidence-item"><span></span><strong>Calibration certificate</strong></div>
-        </div>
-        <p class="closing-note fade-in">Sentry Compliance turns those evidence points into a monthly report your team can file before anyone asks for it.</p>
-      </div>
-    </section>
-
-    <section id="how-it-works">
-      <div class="container">
-        <div class="section-head fade-in">
-          <p class="eyebrow">The Process</p>
-          <h2>From Cold Chain Gap Check to Live Monitoring in Under a Week</h2>
-        </div>
-        <div class="steps">
-          <article class="step fade-in">
-            <div>
-              <h3>Free Compliance Audit</h3>
-              <p>We visit your pharmacy, review your current fridge monitoring setup, identify documentation gaps, and provide a written gap report. No cost. No obligation.</p>
-            </div>
-          </article>
-          <article class="step fade-in">
-            <div>
-              <h3>Professional Installation</h3>
-              <p>We install wireless sensors in each cold storage unit and connect them to a dedicated cellular gateway. No dependency on your pharmacy WiFi. Standard installs usually take 2&ndash;3 hours.</p>
-            </div>
-          </article>
-          <article class="step fade-in">
-            <div>
-              <h3>Continuous Monitoring and Monthly Reports</h3>
-              <p>Your temperature record builds automatically. If a reading moves outside the configured range, nominated contacts receive alerts. At the start of each month, you receive a compliance report.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="what-you-get" class="dark-section">
-      <div class="container">
-        <div class="section-head fade-in">
-          <p class="eyebrow">The Managed Service</p>
-          <h2>Everything Included. Nothing Left for Staff to Chase.</h2>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card fade-in"><span class="feature-num">01</span><h3>24/7 Continuous Monitoring</h3><p>Sensors report at regular intervals around the clock, including nights, weekends, and public holidays.</p></article>
-          <article class="feature-card fade-in"><span class="feature-num">02</span><h3>Cellular Gateway</h3><p>Monitoring runs through a dedicated cellular connection, reducing dependency on pharmacy WiFi, router changes, or local internet outages.</p></article>
-          <article class="feature-card fade-in"><span class="feature-num">03</span><h3>SMS and Email Alerts</h3><p>Temperature excursions trigger fast alerts to nominated contacts, with escalation if the first contact does not acknowledge.</p></article>
-          <article class="feature-card fade-in"><span class="feature-num">04</span><h3>Monthly Compliance Reports</h3><p>A professionally formatted monthly PDF summarises readings, uptime, alerts, response events, and calibration status. Monthly compliance report for audit, accreditation, and insurance documentation.</p></article>
-          <article class="feature-card fade-in"><span class="feature-num">05</span><h3>Annual Calibration Support</h3><p>Sensors are checked against a traceable reference standard and supported with calibration documentation.</p></article>
-          <article class="feature-card fade-in"><span class="feature-num">06</span><h3>5-Year Data Retention</h3><p>Your monitoring history is stored securely and can be accessed when needed for audits, accreditation, or internal review.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="compliance-report">
-      <div class="container report-grid">
-        <div class="fade-in">
-          <p class="eyebrow">The Deliverable</p>
-          <h2>The Report Is the Product</h2>
-          <p class="section-intro">The sensors collect the data. The report turns that data into usable compliance evidence.</p>
-          <ul class="report-list">
-            <li>Site and fridge details</li>
-            <li>Reporting period</li>
-            <li>Monitoring uptime</li>
-            <li>Temperature summary</li>
-            <li>Excursion events</li>
-            <li>Alert and response history</li>
-            <li>Calibration status</li>
-            <li>Overall compliance summary</li>
-          </ul>
-        </div>
-        <aside class="report-mock fade-in" aria-label="Monthly compliance report example">
-          <div class="report-title">
-            <strong>Cold Chain Compliance Report</strong>
-            <span>March 2026</span>
-          </div>
-          <div class="report-row"><span>Pharmacy</span><strong>Example Pharmacy</strong></div>
-          <div class="report-row"><span>Reporting Period</span><strong>March 2026</strong></div>
-          <div class="report-row"><span>Overall Status</span><strong>Monitoring Active</strong></div>
-          <div class="report-row"><span>Fridge 1</span><strong>Within configured range</strong></div>
-          <div class="report-row"><span>Fridge 2</span><strong>Within configured range</strong></div>
-          <div class="report-row"><span>Calibration Status</span><strong>Current</strong></div>
-          <p class="report-foot">Designed to support pharmacy audit preparation, accreditation evidence, internal governance, and insurance documentation.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section id="pricing">
-      <div class="container">
-        <div class="section-head fade-in">
-          <p class="eyebrow">Investment</p>
-          <h2>Simple Managed-Service Pricing</h2>
-          <p class="section-intro">You do not buy sensors. Sentry Compliance owns, maintains, and supports the monitoring hardware. Your pharmacy receives a managed compliance monitoring service.</p>
-        </div>
-        <div class="pricing-grid">
-          <article class="price-card fade-in">
-            <h3>Standard Package</h3>
-            <p class="package-for">For 1&ndash;2 cold storage units</p>
-            <div class="price-lines">
-              <div><span>Installation and setup</span><strong>$895 one-time</strong></div>
-              <div><span>Monitoring service</span><strong>$195/month</strong></div>
-              <div><span>Annual calibration support</span><strong>$195/year</strong></div>
-            </div>
-            <ul class="include-list">
-              <li>2&ndash;3 wireless sensors</li>
-              <li>Cellular gateway</li>
-              <li>Continuous monitoring</li>
-              <li>SMS/email alerts</li>
-              <li>Monthly compliance report</li>
-              <li>Annual calibration documentation</li>
-              <li>Dedicated support</li>
-            </ul>
-          </article>
-          <article class="price-card featured fade-in">
-            <span class="badge">Most Common</span>
-            <h3>Extended Package</h3>
-            <p class="package-for">For 3&ndash;4 cold storage units</p>
-            <div class="price-lines">
-              <div><span>Installation and setup</span><strong>$1,395 one-time</strong></div>
-              <div><span>Monitoring service</span><strong>$275/month</strong></div>
-              <div><span>Annual calibration support</span><strong>$275/year</strong></div>
-            </div>
-            <ul class="include-list">
-              <li>4&ndash;6 wireless sensors</li>
-              <li>Cellular gateway</li>
-              <li>Continuous monitoring</li>
-              <li>SMS/email alerts</li>
-              <li>Monthly compliance report</li>
-              <li>Annual calibration documentation</li>
-              <li>Dedicated support</li>
-            </ul>
-          </article>
-        </div>
-        <p class="pricing-note fade-in">12-month minimum subscription. Hardware remains owned and maintained by Sentry Compliance. Multi-site pricing available for owners with two or more pharmacies.</p>
-        <div class="cta-row fade-in">
-          <a class="btn" href="#contact">Book Your Free Compliance Audit</a>
-        </div>
-        <p class="microcopy fade-in">No obligation. Melbourne pharmacies only during initial rollout.</p>
-      </div>
-    </section>
-
-    <section id="why-sentry" class="dark-section">
-      <div class="container">
-        <div class="section-head fade-in">
-          <p class="eyebrow">Why Sentry Compliance</p>
-          <h2>Built for Regulated Environments, Not Gadget Buyers</h2>
-          <p class="section-intro">Sentry Compliance was created by infrastructure and operations specialists with experience in critical environments where uptime, documentation, escalation, and compliance evidence matter. The service is designed for pharmacy owners who need a practical monitoring system and clear records &mdash; not another device for staff to manage.</p>
-        </div>
-        <div class="feature-grid">
-          <article class="trust-card fade-in"><h3>Melbourne Based</h3><p>Local service, local installation, and support for Melbourne pharmacies.</p></article>
-          <article class="trust-card fade-in"><h3>Infrastructure Background</h3><p>Built from experience in critical systems, monitoring, power, HVAC, communications, and operational compliance.</p></article>
-          <article class="trust-card fade-in"><h3>Compliance-Led Design</h3><p>The reporting, alerting, and calibration workflow is designed around evidence, not just notifications.</p></article>
-          <article class="trust-card fade-in"><h3>Managed Hardware Model</h3><p>We own and maintain the equipment, reducing upfront complexity and removing hardware management from pharmacy staff.</p></article>
-          <article class="trust-card fade-in"><h3>Insurance Certificates</h3><p>Professional indemnity and public liability insurance certificates available on request.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="free-audit">
-      <div class="container audit-panel fade-in">
-        <div>
-          <p class="eyebrow">Free Gap Check</p>
-          <h2>What Happens During the Free Compliance Audit?</h2>
-          <ul class="audit-list">
-            <li>Review your current fridge monitoring method</li>
-            <li>Check whether monitoring depends on manual staff action</li>
-            <li>Identify overnight, weekend, and public holiday gaps</li>
-            <li>Review calibration documentation</li>
-            <li>Review alert process and contact escalation</li>
-            <li>Identify reporting gaps before an audit or incident</li>
-            <li>Provide a written gap report</li>
-          </ul>
-        </div>
-        <div class="reassurance">
-          <p>No obligation. No pressure. The audit is designed to show whether your current setup gives you enough evidence.</p>
-          <a class="btn" href="#contact">Book My Free Audit</a>
-          <p class="microcopy">No obligation. Melbourne pharmacies only during initial rollout.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="container">
-        <div class="section-head fade-in">
-          <p class="eyebrow">FAQ</p>
-          <h2>Cold Chain Monitoring Questions</h2>
-        </div>
-        <div class="faq-list fade-in">
-          <article class="faq-item is-open">
-            <button class="faq-question" type="button" aria-expanded="true">Do I own the monitoring hardware?<span aria-hidden="true">+</span></button>
-            <div class="faq-answer"><p>No. Sentry Compliance owns and maintains the installed monitoring equipment. Your subscription covers hardware, monitoring, maintenance, reporting, and support. If the service ends, the equipment is retrieved.</p></div>
-          </article>
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">What happens if my pharmacy internet goes down?<span aria-hidden="true">+</span></button>
-            <div class="faq-answer"><p>The monitoring gateway uses a cellular connection, so it does not rely on your pharmacy WiFi or local router. This helps reduce monitoring gaps caused by internet changes or outages.</p></div>
-          </article>
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">What temperature range do you monitor?<span aria-hidden="true">+</span></button>
-            <div class="faq-answer"><p>For vaccine cold chain monitoring, sensors are generally configured around the +2&deg;C to +8&deg;C range, with alert thresholds set to suit the pharmacy&rsquo;s requirements. Thresholds can be configured based on the storage requirement of the products being monitored.</p></div>
-          </article>
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">How quickly will we be alerted?<span aria-hidden="true">+</span></button>
-            <div class="faq-answer"><p>Alerts are sent quickly after a configured threshold breach is detected. The service can escalate to a secondary contact if the first contact does not acknowledge the alert.</p></div>
-          </article>
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">Is the report TGA approved?<span aria-hidden="true">+</span></button>
-            <div class="faq-answer"><p>The report is not "TGA approved" and should not be described that way. It is designed to support TGA-aligned cold chain compliance evidence by documenting readings, alerts, response events, uptime, and calibration status.</p></div>
-          </article>
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">How long does installation take?<span aria-hidden="true">+</span></button>
-            <div class="faq-answer"><p>A standard pharmacy installation usually takes 2&ndash;3 hours. Monitoring can typically go live the same day.</p></div>
-          </article>
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">Can this support more than one pharmacy?<span aria-hidden="true">+</span></button>
-            <div class="faq-answer"><p>Yes. Multi-site owners can receive separate site reports and consolidated support. Multi-site pricing is available.</p></div>
-          </article>
-          <article class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">Does this replace our legal or professional responsibility?<span aria-hidden="true">+</span></button>
-            <div class="faq-answer"><p>No. The service provides monitoring, alerting, reporting, and calibration support. Pharmacy owners and pharmacists remain responsible for meeting all applicable obligations.</p></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <div class="section-head fade-in">
-          <p class="eyebrow">Get Started</p>
-          <h2>Book Your Free Compliance Audit</h2>
-          <p class="section-intro">We will review your current cold storage monitoring setup and provide a written gap report. No obligation. Melbourne pharmacies only during initial rollout.</p>
-        </div>
-        <div class="contact-grid">
-          <!-- Replace the mailto action with a secure production form endpoint when available. -->
-          <form class="audit-form fade-in" action="mailto:[ADD EMAIL]" method="post" enctype="text/plain">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="Name" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="pharmacy">Pharmacy Name</label>
-              <input id="pharmacy" name="Pharmacy Name" autocomplete="organization" required>
-            </div>
-            <div class="field">
-              <label for="suburb">Suburb</label>
-              <input id="suburb" name="Suburb" autocomplete="address-level2" required>
-            </div>
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input id="phone" name="Phone" autocomplete="tel" required>
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="Email" type="email" autocomplete="email" required>
-            </div>
-            <div class="field">
-              <label for="units">Number of cold storage units</label>
-              <input id="units" name="Number of cold storage units" type="number" min="1" inputmode="numeric">
-            </div>
-            <div class="field full">
-              <label for="setup">Current monitoring setup</label>
-              <select id="setup" name="Current monitoring setup">
-                <option>Manual logbook</option>
-                <option>Basic data logger</option>
-                <option>WiFi sensor</option>
-                <option>Existing commercial system</option>
-                <option>Not sure</option>
-              </select>
-            </div>
-            <div class="field full">
-              <label for="message">Message</label>
-              <textarea id="message" name="Message" placeholder="Tell us anything useful about your current cold storage setup."></textarea>
-            </div>
-            <button class="btn" type="submit">Book My Free Audit</button>
-            <p class="form-note">Static site note: this form currently opens an email draft via mailto. Replace the form action with a real endpoint before launch.</p>
-          </form>
-          <aside class="contact-card fade-in">
-            <h3>Contact Details</h3>
-            <dl>
-              <div><dt>Phone</dt><dd>[ADD PHONE NUMBER]</dd></div>
-              <div><dt>Email</dt><dd>[ADD EMAIL]</dd></div>
-              <div><dt>Service area</dt><dd>Melbourne metro</dd></div>
-              <div><dt>Hours</dt><dd>Monday&ndash;Friday, 8:00am&ndash;5:00pm</dd></div>
-            </dl>
-          </aside>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
+<!-- HERO -->
+<section id="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero-grid">
       <div>
-        <div class="footer-brand">Sentry Compliance Pty Ltd</div>
-        <div>ABN: [ADD ABN]</div>
-        <div>Melbourne, Victoria</div>
-        <div>Cold Chain Compliance Monitoring for Independent Pharmacies</div>
+        <p class="hero-pre">TGA-Aligned Cold Chain Monitoring for Melbourne Pharmacies</p>
+        <h1 id="h1">If Your Vaccine Fridge Failed Tonight, Would You Know Before Monday Morning?</h1>
+        <p class="hero-sub">Sentry Compliance installs and manages continuous cold chain monitoring for independent Melbourne pharmacies. 24/7 alerts, monthly compliance reports, annual calibration, and audit-ready documentation — without relying on your pharmacy WiFi.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-amber">Book Your Free Compliance Audit</a>
+          <a href="#how-it-works" class="btn btn-ghost">See How It Works</a>
+        </div>
+        <p class="hero-micro">No obligation. Melbourne pharmacies only during initial rollout.</p>
+        <div class="badges" role="list" aria-label="Service highlights">
+          <span class="badge" role="listitem">Melbourne Based</span>
+          <span class="badge" role="listitem">Cellular Monitoring</span>
+          <span class="badge" role="listitem">Monthly Compliance Reports</span>
+          <span class="badge" role="listitem">Annual Calibration Support</span>
+        </div>
       </div>
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
+      <!-- Hero Dashboard Mockup -->
+      <div class="fade" role="img" aria-label="Mockup of Sentry Compliance cold chain monitoring dashboard showing active vaccine fridge monitoring for Example Pharmacy Carlton">
+        <div class="dashboard">
+          <div class="db-hd">
+            <div>
+              <div class="db-site">Sentry Compliance Monitoring<span>Example Pharmacy — Carlton</span></div>
+            </div>
+            <div class="db-live">Monitoring Active</div>
+          </div>
+          <div class="db-body">
+            <div class="db-section-title">Cold Storage Units</div>
+            <div class="db-row">
+              <span class="db-lbl">Fridge 1 — Vaccine Refrigerator</span>
+              <span class="db-val ok"><span class="dot dot-ok"></span>+4.6&deg;C &mdash; Normal</span>
+            </div>
+            <div class="db-row">
+              <span class="db-lbl">Fridge 2 — Vaccine Refrigerator</span>
+              <span class="db-val ok"><span class="dot dot-ok"></span>+5.2&deg;C &mdash; Normal</span>
+            </div>
+            <div class="db-row">
+              <span class="db-lbl">Vaccine Freezer</span>
+              <span class="db-val fr"><span class="dot dot-fr"></span>&minus;18.4&deg;C &mdash; Normal</span>
+            </div>
+            <div class="db-divider"></div>
+            <div class="db-section-title">Connection &amp; Status</div>
+            <div class="db-row">
+              <span class="db-lbl">Gateway Connection</span>
+              <span class="db-val ok"><span class="dot dot-ok"></span>Cellular Online</span>
+            </div>
+            <div class="db-row">
+              <span class="db-lbl">Last Reading</span>
+              <span class="db-val am">2 minutes ago</span>
+            </div>
+            <div class="db-row">
+              <span class="db-lbl">Reporting Interval</span>
+              <span class="db-val">Every 10 minutes</span>
+            </div>
+            <!-- Temperature line chart -->
+            <div class="db-chart-wrap">
+              <div class="chart-head">
+                <span class="chart-lbl">Fridge 1 — 24h temperature trend</span>
+                <span class="chart-range">Range: +2&deg;C to +8&deg;C</span>
+              </div>
+              <svg class="chart-svg" viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <!-- Upper threshold line: 8C -->
+                <line x1="0" y1="16" x2="280" y2="16" stroke="#D4A017" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+                <!-- Lower threshold line: 2C -->
+                <line x1="0" y1="56" x2="280" y2="56" stroke="#D4A017" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+                <!-- Y-axis labels -->
+                <text x="2" y="14" fill="#8FA8C0" font-size="7" font-family="Barlow,sans-serif">+8&deg;C</text>
+                <text x="2" y="60" fill="#8FA8C0" font-size="7" font-family="Barlow,sans-serif">+2&deg;C</text>
+                <!-- Shaded safe zone -->
+                <rect x="0" y="16" width="280" height="40" fill="rgba(61,170,114,0.07)"/>
+                <!-- Temperature line -->
+                <polyline points="0,40 12,38 24,42 36,41 48,39 60,38 72,40 84,42 96,41 108,39 120,40 132,38 144,41 156,42 168,40 180,39 192,41 204,40 216,38 228,40 240,41 252,39 264,40 280,41" fill="none" stroke="#3DAA72" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+                <!-- Current reading dot -->
+                <circle cx="280" cy="41" r="3" fill="#3DAA72"/>
+              </svg>
+            </div>
+          </div>
+          <div class="db-ft">
+            <span>Monthly report: Ready 1st of each month</span>
+            <span style="color:var(--amber)">&#9679; Live</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI ANSWER BLOCK -->
+<section id="what-we-do" class="pad" aria-labelledby="h2-what">
+  <div class="wrap">
+    <p class="eyebrow fade">What Sentry Compliance Does</p>
+    <h2 id="h2-what" class="fade">Compliance Infrastructure for Pharmacy Cold Storage</h2>
+    <p class="intro-text fade">Sentry Compliance provides fully managed cold chain temperature monitoring for independent pharmacies in Melbourne. The service includes wireless sensors, a dedicated cellular gateway, SMS and email alerts, monthly TGA-aligned compliance reports, annual calibration support, and 5-year monitoring data retention.</p>
+    <div class="answer-grid">
+      <div class="ab fade">
+        <h4>Who It&rsquo;s For</h4>
+        <p>Independent pharmacy owners, pharmacists-in-charge, and pharmacy managers operating one or more sites across Melbourne metro.</p>
+      </div>
+      <div class="ab fade">
+        <h4>The Problem It Solves</h4>
+        <p>Manual temperature logs leave gaps overnight, on weekends, and on public holidays. They also cannot send alerts or produce the documented evidence chain needed for audits.</p>
+      </div>
+      <div class="ab fade">
+        <h4>How Alerts Work</h4>
+        <p>When a sensor detects a reading outside the configured range, SMS and email alerts are sent immediately to nominated contacts. If unacknowledged, alerts escalate to a secondary contact.</p>
+      </div>
+      <div class="ab fade">
+        <h4>Why Cellular Matters</h4>
+        <p>The monitoring gateway uses a cellular network connection, not your pharmacy WiFi. Router changes, internet outages, and password resets do not affect monitoring continuity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RISK -->
+<section id="risk" class="pad" aria-labelledby="h2-risk">
+  <div class="wrap">
+    <p class="eyebrow fade">The Risk</p>
+    <h2 id="h2-risk" class="fade">Manual Logs Leave Dangerous Gaps</h2>
+    <p class="fade" style="max-width:660px;color:#4A6070;font-size:1.04rem;line-height:1.85;margin-top:.875rem">Most pharmacies work hard to maintain vaccine cold chain records. The problem is that manual checks and basic loggers often fail at the exact time you need them most &mdash; overnight, on weekends, during public holidays, or when no one is watching the fridge.</p>
+    <div class="risk-cards">
+      <article class="risk-card fade">
+        <h3>The Weekend Gap</h3>
+        <p>A manual logbook may show a Friday afternoon reading and a Monday morning reading, but it cannot prove what happened during the 60&plus; hours in between.</p>
+      </article>
+      <article class="risk-card fade">
+        <h3>No Alert, No Action</h3>
+        <p>If a fridge compressor fails at 2am, a paper logbook cannot notify anyone. By the time staff arrive, vaccines may already need to be quarantined and assessed.</p>
+      </article>
+      <article class="risk-card fade">
+        <h3>Weak Audit Evidence</h3>
+        <p>Temperature data without calibration records, alert history, and response evidence may not provide the documentation needed during an audit, accreditation review, or insurance inquiry.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT MATTERS -->
+<section id="why-it-matters" class="pad" aria-labelledby="h2-why">
+  <div class="wrap">
+    <p class="eyebrow fade">Why It Matters</p>
+    <h2 id="h2-why" class="fade">Cold Chain Compliance Is an Operational Risk, Not an Admin Task</h2>
+    <div class="comp-grid">
+      <div class="comp-copy fade">
+        <p>Australian vaccine cold chain guidance is built around keeping vaccines within the recommended +2&deg;C to +8&deg;C range, with +5&deg;C as the target midpoint under the National Vaccine Storage Guidelines &ldquo;Strive for 5&rdquo;. When monitoring is manual, disconnected, or uncalibrated, the risk is not just product loss &mdash; it is incomplete evidence.</p>
+        <p>An audit, accreditation review, or insurance inquiry does not simply ask whether your fridge was cold enough. It asks whether you can demonstrate, with documented records, that you knew continuously what the temperature was &mdash; and that you acted when it changed.</p>
+        <p class="pull">Sentry Compliance turns those evidence points into a monthly report your team can file before anyone asks for it.</p>
+      </div>
+      <div class="ev-grid fade">
+        <div class="ev"><h4>Temperature Records</h4><p>Continuous readings logged at regular intervals, day and night, weekends and holidays.</p></div>
+        <div class="ev"><h4>Excursion Alerts</h4><p>Documented record of every threshold breach, time-stamped and retained for reporting.</p></div>
+        <div class="ev"><h4>Response History</h4><p>Alert acknowledgement and escalation events recorded as part of the compliance record.</p></div>
+        <div class="ev"><h4>Calibration Certificate</h4><p>Annual sensor calibration against a traceable reference standard, with documentation.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS + DIAGRAM -->
+<section id="how-it-works" class="pad" aria-labelledby="h2-process">
+  <div class="wrap">
+    <p class="eyebrow fade">The Process</p>
+    <h2 id="h2-process" class="fade">From Cold Chain Gap Check to Live Monitoring in Under a Week</h2>
+    <div class="steps-row">
+      <article class="step fade">
+        <div class="step-n" aria-hidden="true">1</div>
+        <h3>Free Compliance Audit</h3>
+        <p>We visit your pharmacy, review your current fridge monitoring setup, identify documentation gaps, and provide a written gap report. No cost. No obligation.</p>
+      </article>
+      <article class="step fade">
+        <div class="step-n" aria-hidden="true">2</div>
+        <h3>Professional Installation</h3>
+        <p>We install wireless sensors in each cold storage unit and connect them to a dedicated cellular gateway. No dependency on your pharmacy WiFi. Standard installs usually take 2&ndash;3 hours.</p>
+      </article>
+      <article class="step fade">
+        <div class="step-n" aria-hidden="true">3</div>
+        <h3>Continuous Monitoring and Monthly Reports</h3>
+        <p>Your temperature record builds automatically. If a reading moves outside the configured range, nominated contacts receive alerts. At the start of each month, you receive a compliance report.</p>
+      </article>
+    </div>
+    <!-- Workflow Diagram -->
+    <div class="diagram fade" role="img" aria-label="Diagram showing wireless sensor inside fridge connecting to cellular gateway, then to cloud monitoring platform, then to SMS and email alerts, and finally to monthly compliance report">
+      <p class="diag-title">How Monitoring Works End-to-End</p>
+      <div class="flow">
+        <div class="fn">
+          <div class="fi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+            </svg>
+          </div>
+          <span class="fl">Vaccine<br>Fridge</span>
+          <span class="fs">Cold storage unit</span>
+        </div>
+        <div class="fa">&rsaquo;</div>
+        <div class="fn">
+          <div class="fi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 010 8.49m-8.48-.01a6 6 0 010-8.49M5.05 5.05a12 12 0 000 13.9m13.9 0a12 12 0 000-13.9"/>
+            </svg>
+          </div>
+          <span class="fl">Wireless<br>Sensor</span>
+          <span class="fs">Reads every 10 min</span>
+        </div>
+        <div class="fa">&rsaquo;</div>
+        <div class="fn">
+          <div class="fi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+            </svg>
+          </div>
+          <span class="fl">Cellular<br>Gateway</span>
+          <span class="fs">No WiFi dependency</span>
+        </div>
+        <div class="fa">&rsaquo;</div>
+        <div class="fn">
+          <div class="fi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/>
+            </svg>
+          </div>
+          <span class="fl">Cloud<br>Platform</span>
+          <span class="fs">Secure monitoring</span>
+        </div>
+        <div class="fa">&rsaquo;</div>
+        <div class="fn">
+          <div class="fi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </div>
+          <span class="fl">SMS &amp; Email<br>Alerts</span>
+          <span class="fs">Instant excursion alerts</span>
+        </div>
+        <div class="fa">&rsaquo;</div>
+        <div class="fn">
+          <div class="fi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8m8 4H8m2-8H8"/>
+            </svg>
+          </div>
+          <span class="fl">Monthly<br>Report</span>
+          <span class="fs">Audit-ready PDF</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section id="what-you-get" class="pad-lg" aria-labelledby="h2-service">
+  <div class="wrap" style="position:relative;z-index:1">
+    <p class="eyebrow fade">The Managed Service</p>
+    <h2 id="h2-service" class="fade" style="color:var(--lt)">Everything Included. Nothing Left for Staff to Chase.</h2>
+    <div class="feat-grid">
+      <article class="feat fade"><p class="feat-n">01</p><h3>24/7 Continuous Monitoring</h3><p>Sensors report at regular intervals around the clock, including nights, weekends, and public holidays.</p></article>
+      <article class="feat fade"><p class="feat-n">02</p><h3>Cellular Gateway</h3><p>Monitoring runs through a dedicated cellular connection, reducing dependency on pharmacy WiFi, router changes, or internet outages.</p></article>
+      <article class="feat fade"><p class="feat-n">03</p><h3>SMS and Email Alerts</h3><p>Temperature excursions trigger fast alerts to nominated contacts, with escalation if the first contact does not acknowledge.</p></article>
+      <article class="feat fade"><p class="feat-n">04</p><h3>Monthly Compliance Reports</h3><p>A professionally formatted monthly PDF summarises readings, uptime, alerts, response events, and calibration status.</p></article>
+      <article class="feat fade"><p class="feat-n">05</p><h3>Annual Calibration Support</h3><p>Sensors are checked against a traceable reference standard and supported with calibration documentation each year.</p></article>
+      <article class="feat fade"><p class="feat-n">06</p><h3>5-Year Data Retention</h3><p>Your monitoring history is stored securely and can be accessed when needed for audits, accreditation, or internal review.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ALERTS SECTION -->
+<section id="alerts" class="pad" aria-labelledby="h2-alerts">
+  <div class="wrap">
+    <p class="eyebrow fade">Alert &amp; Escalation</p>
+    <h2 id="h2-alerts" class="fade">What Happens During a Temperature Excursion</h2>
+    <p class="fade" style="max-width:640px;color:#4A6070;font-size:1.04rem;line-height:1.85;margin-top:.875rem">When a sensor detects a reading outside its configured threshold, the system immediately alerts nominated contacts via SMS and email. If the first contact does not acknowledge within the configured period, the alert escalates to a secondary contact. Every excursion event is recorded and included in the monthly compliance report.</p>
+    <div class="alerts-grid" style="margin-top:2.5rem">
+      <!-- SMS phone mockup -->
+      <div>
+        <p class="eyebrow fade" style="margin-bottom:1rem">SMS Alert Example</p>
+        <div class="phone-wrap fade">
+          <div class="phone" role="img" aria-label="SMS temperature excursion alert example for pharmacy cold chain monitoring — Fridge 2 at 8.7 degrees Celsius">
+            <div class="p-screen">
+              <div class="p-status"><span>9:47 AM</span><span>&#9679;&#9679;&#9679;</span></div>
+              <div class="p-sms-hd">
+                <div class="p-sms-name">Sentry Compliance</div>
+                <div class="p-sms-info">Monitoring Alert</div>
+              </div>
+              <div class="p-body">
+                <div class="p-time">Today 9:47 AM</div>
+                <div class="sms-b alert">&#9888; SENTRY ALERT: Fridge 2 at Example Pharmacy is reading 8.7&deg;C, above configured range (+2&deg;C to +8&deg;C). Please check fridge door, power, and product condition. Acknowledge this alert to prevent escalation.</div>
+                <div class="p-time">Today 9:52 AM</div>
+                <div class="sms-b reply">Acknowledged &mdash; checking fridge now.</div>
+              </div>
+              <div class="p-home"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Email mockup -->
+      <div>
+        <p class="eyebrow fade" style="margin-bottom:1rem">Email Alert Example</p>
+        <div class="fade" role="img" aria-label="Email cold chain alert example showing temperature excursion details for pharmacy audit documentation">
+          <div class="email-card">
+            <div class="e-toolbar"><div class="e-dot" style="background:#ff5f57"></div><div class="e-dot" style="background:#febc2e"></div><div class="e-dot" style="background:#28c840"></div></div>
+            <div class="e-hd">
+              <div class="e-from"><strong>Sentry Compliance</strong> &lt;alerts@sentrycompliance.com.au&gt;</div>
+              <div class="e-subj">&#9888; Cold Chain Alert &mdash; Fridge 2 Temperature Excursion</div>
+            </div>
+            <div class="e-body">
+              <div class="e-banner"><p>&#9888; Temperature excursion detected &mdash; immediate attention required</p></div>
+              <div class="e-field"><span class="e-fl">Site</span><span class="e-fv">Example Pharmacy &mdash; Carlton</span></div>
+              <div class="e-field"><span class="e-fl">Device</span><span class="e-fv">Fridge 2 &mdash; Vaccine Refrigerator</span></div>
+              <div class="e-field"><span class="e-fl">Current reading</span><span class="e-fv red">+8.7&deg;C</span></div>
+              <div class="e-field"><span class="e-fl">Configured range</span><span class="e-fv">+2&deg;C to +8&deg;C</span></div>
+              <div class="e-field"><span class="e-fl">Detected at</span><span class="e-fv">9:47 AM, 14 March 2026</span></div>
+              <div class="e-field"><span class="e-fl">Recommended action</span><span class="e-fv">Check door seal, power, thermostat</span></div>
+              <div class="e-action"><span class="e-btn">Acknowledge Alert</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Escalation flow -->
+    <div class="escalation fade" role="img" aria-label="Escalation flow: sensor detects excursion, primary contact alerted, if unacknowledged secondary contact alerted, event recorded in monthly report">
+      <p class="esc-title">Two-Tier Escalation Process</p>
+      <div class="esc-flow">
+        <div class="esc-step"><div class="esc-icon">&#127777;</div><span class="esc-lbl">Sensor Detects Excursion</span><span class="esc-sub">Reading outside configured range</span></div>
+        <div class="esc-arr">&rsaquo;</div>
+        <div class="esc-step"><div class="esc-icon">&#128241;</div><span class="esc-lbl">Primary Contact Alerted</span><span class="esc-sub">SMS + email sent immediately</span></div>
+        <div class="esc-arr">&rsaquo;</div>
+        <div class="esc-step"><div class="esc-icon">&#8987;</div><span class="esc-lbl">Acknowledgement Window</span><span class="esc-sub">Configured response period</span></div>
+        <div class="esc-arr">&rsaquo;</div>
+        <div class="esc-step"><div class="esc-icon">&#128222;</div><span class="esc-lbl">Escalation if Unacknowledged</span><span class="esc-sub">Secondary contact alerted</span></div>
+        <div class="esc-arr">&rsaquo;</div>
+        <div class="esc-step"><div class="esc-icon">&#128196;</div><span class="esc-lbl">Event Recorded</span><span class="esc-sub">Included in monthly compliance report</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REPORT SECTION -->
+<section id="the-report" class="pad-lg" aria-labelledby="h2-report">
+  <div class="wrap" style="position:relative;z-index:1">
+    <p class="eyebrow fade">The Deliverable</p>
+    <h2 id="h2-report" class="fade" style="color:var(--lt)">The Report Is the Product</h2>
+    <div class="report-layout">
+      <div class="fade">
+        <p class="report-copy" style="color:var(--muted);font-size:1.04rem;line-height:1.85">The sensors collect the data. The report turns that data into usable compliance evidence. Each monthly report is generated automatically and delivered to nominated contacts at the start of the month.</p>
+        <p class="report-copy" style="color:var(--muted);font-size:1rem;line-height:1.85;margin-top:1rem">The report is designed to support pharmacy audit preparation, accreditation evidence, internal governance, and insurance documentation.</p>
+        <ul class="rep-list" aria-label="What the monthly compliance report includes">
+          <li>Site and fridge details</li>
+          <li>Reporting period and monitoring uptime</li>
+          <li>Full temperature summary with min/max/average</li>
+          <li>Fridge 1 range: +3.8&deg;C to +5.9&deg;C</li>
+          <li>Fridge 2 range: +3.6&deg;C to +6.2&deg;C</li>
+          <li>Excursion events (time, duration, magnitude)</li>
+          <li>Alert and response history</li>
+          <li>Calibration status and documentation reference</li>
+          <li>Overall compliance summary</li>
+        </ul>
+      </div>
+      <!-- PDF Mockup -->
+      <div class="pdf-wrap fade" role="img" aria-label="Monthly cold chain compliance report mockup for pharmacy audit documentation showing Example Pharmacy March 2026">
+        <div class="pdf-outer">
+          <div class="pdf">
+            <div class="pdf-hd">
+              <div>
+                <div class="pdf-hd-title">Cold Chain Compliance Report</div>
+                <div class="pdf-hd-sub">TGA-Aligned Monitoring Documentation</div>
+              </div>
+              <div class="pdf-logo"><span>SENTRY</span> COMPLIANCE</div>
+            </div>
+            <div class="pdf-body">
+              <div class="pdf-meta">
+                <div class="pm"><label>Pharmacy</label><p>Example Pharmacy</p></div>
+                <div class="pm"><label>Reporting Period</label><p>March 2026</p></div>
+                <div class="pm"><label>Overall Status</label><p style="color:#2e7d4f">&#9679; Monitoring Active</p></div>
+                <div class="pm"><label>Monitoring Uptime</label><p>99.8%</p></div>
+              </div>
+              <div class="pdf-sec">Temperature Summary</div>
+              <table class="pdf-tbl">
+                <thead><tr><th>Unit</th><th>Min</th><th>Max</th><th>Avg</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>Fridge 1</td><td>+3.8&deg;C</td><td>+5.9&deg;C</td><td>+4.7&deg;C</td><td style="color:#2e7d4f;font-weight:700">Within range</td></tr>
+                  <tr><td>Fridge 2</td><td>+3.6&deg;C</td><td>+6.2&deg;C</td><td>+5.1&deg;C</td><td style="color:#2e7d4f;font-weight:700">Within range</td></tr>
+                </tbody>
+              </table>
+              <div class="pdf-sec">Compliance Status</div>
+              <div class="pdf-sr"><span class="pdf-sl">Excursion events</span><span class="pdf-sv ok">0 recorded</span></div>
+              <div class="pdf-sr"><span class="pdf-sl">Alert events</span><span class="pdf-sv ok">None</span></div>
+              <div class="pdf-sr"><span class="pdf-sl">Calibration status</span><span class="pdf-sv ok">Current</span></div>
+              <div class="pdf-sr"><span class="pdf-sl">Data retention</span><span class="pdf-sv">5-year secure archive</span></div>
+            </div>
+            <div class="pdf-ft">
+              <p>Issued by: Sentry Compliance Pty Ltd &mdash; sentrycompliance.com.au</p>
+              <p style="font-weight:600;color:#555">1 April 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pad" aria-labelledby="h2-pricing">
+  <div class="wrap">
+    <p class="eyebrow fade">Investment</p>
+    <h2 id="h2-pricing" class="fade">Simple Managed-Service Pricing</h2>
+    <p class="fade" style="max-width:620px;color:#4A6070;font-size:1.04rem;line-height:1.85;margin-top:.875rem">You do not buy sensors. Sentry Compliance owns, maintains, and supports the monitoring hardware. Your pharmacy receives a fully managed compliance monitoring service.</p>
+    <div class="price-cards">
+      <div class="pc fade" aria-label="Standard monitoring package for 1 to 2 cold storage units">
+        <div class="pc-hd"><p class="pc-tier">Standard Package</p><h3>1&ndash;2 Cold Storage Units</h3><p class="pc-for">Suitable for most independent pharmacies</p></div>
+        <div class="pc-body">
+          <div class="pc-line"><span class="pc-ll">Installation &amp; setup</span><span class="pc-lv">$895 <span>one-time</span></span></div>
+          <div class="pc-line"><span class="pc-ll">Monitoring service</span><span class="pc-lv">$195 <span>/month</span></span></div>
+          <div class="pc-line"><span class="pc-ll">Annual calibration support</span><span class="pc-lv">$195 <span>/year</span></span></div>
+          <div class="pc-incl"><h4>Includes</h4><ul>
+            <li>2&ndash;3 wireless sensors</li><li>Dedicated cellular gateway</li>
+            <li>Continuous 24/7 monitoring</li><li>SMS and email alerts with escalation</li>
+            <li>Monthly compliance report (PDF)</li><li>Annual calibration documentation</li>
+            <li>Dedicated support</li>
+          </ul></div>
+        </div>
+      </div>
+      <div class="pc feat-pc fade" aria-label="Extended monitoring package for 3 to 4 cold storage units, most common">
+        <div class="pc-hd"><span class="pc-badge">Most Common</span><p class="pc-tier">Extended Package</p><h3>3&ndash;4 Cold Storage Units</h3><p class="pc-for">For pharmacies with additional cold storage</p></div>
+        <div class="pc-body">
+          <div class="pc-line"><span class="pc-ll">Installation &amp; setup</span><span class="pc-lv">$1,395 <span>one-time</span></span></div>
+          <div class="pc-line"><span class="pc-ll">Monitoring service</span><span class="pc-lv">$275 <span>/month</span></span></div>
+          <div class="pc-line"><span class="pc-ll">Annual calibration support</span><span class="pc-lv">$275 <span>/year</span></span></div>
+          <div class="pc-incl"><h4>Includes</h4><ul>
+            <li>4&ndash;6 wireless sensors</li><li>Dedicated cellular gateway</li>
+            <li>Continuous 24/7 monitoring</li><li>SMS and email alerts with escalation</li>
+            <li>Monthly compliance report (PDF)</li><li>Annual calibration documentation</li>
+            <li>Dedicated support</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+    <p class="price-note fade">12-month minimum subscription. Hardware remains owned and maintained by Sentry Compliance. Multi-site pricing available for owners with two or more pharmacies.</p>
+    <div class="price-cta fade">
+      <a href="#contact" class="btn btn-amber">Book Your Free Compliance Audit</a>
+      <span class="micro">No obligation. Melbourne pharmacies only during initial rollout.</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SENTRY -->
+<section id="why-sentry" class="pad-lg" aria-labelledby="h2-why-sentry">
+  <div class="wrap" style="position:relative;z-index:1">
+    <p class="eyebrow fade">Why Sentry Compliance</p>
+    <h2 id="h2-why-sentry" class="fade" style="color:var(--lt)">Built for Regulated Environments, Not Gadget Buyers</h2>
+    <p class="why-intro fade">Sentry Compliance was created by infrastructure and operations specialists with experience in critical environments where uptime, documentation, escalation, and compliance evidence matter. The service is designed for pharmacy owners who need a practical monitoring system and clear records &mdash; not another device for staff to manage.</p>
+    <div class="trust-grid">
+      <article class="tc fade"><p class="tc-n">01</p><h3>Melbourne Based</h3><p>Local service, local installation, and support for Melbourne pharmacies.</p></article>
+      <article class="tc fade"><p class="tc-n">02</p><h3>Infrastructure Background</h3><p>Built from experience in critical systems, monitoring, power, HVAC, communications, and operational compliance.</p></article>
+      <article class="tc fade"><p class="tc-n">03</p><h3>Compliance-Led Design</h3><p>The reporting, alerting, and calibration workflow is designed around evidence, not just notifications.</p></article>
+      <article class="tc fade"><p class="tc-n">04</p><h3>Managed Hardware Model</h3><p>We own and maintain the equipment, reducing upfront complexity and removing hardware management from pharmacy staff.</p></article>
+    </div>
+    <div class="ins-card fade"><p>Professional indemnity and public liability insurance certificates available on request. <em style="font-style:normal;color:var(--amber)">[Insurance details to be confirmed &mdash; placeholder]</em></p></div>
+  </div>
+</section>
+
+<!-- FREE AUDIT -->
+<section id="free-audit" class="pad" aria-labelledby="h2-audit">
+  <div class="wrap">
+    <p class="eyebrow fade">Free Gap Check</p>
+    <h2 id="h2-audit" class="fade">What Happens During the Free Compliance Audit?</h2>
+    <div class="audit-grid">
+      <div class="fade">
+        <ul class="checklist">
+          <li><span class="chk" aria-hidden="true">&#10003;</span>Review your current fridge monitoring method</li>
+          <li><span class="chk" aria-hidden="true">&#10003;</span>Check whether monitoring depends on manual staff action</li>
+          <li><span class="chk" aria-hidden="true">&#10003;</span>Identify overnight, weekend, and public holiday gaps</li>
+          <li><span class="chk" aria-hidden="true">&#10003;</span>Review calibration documentation</li>
+          <li><span class="chk" aria-hidden="true">&#10003;</span>Review alert process and contact escalation</li>
+          <li><span class="chk" aria-hidden="true">&#10003;</span>Identify reporting gaps before an audit or incident</li>
+          <li><span class="chk" aria-hidden="true">&#10003;</span>Provide a written gap report at no cost</li>
+        </ul>
+        <p style="margin-top:1.5rem;font-size:.93rem;color:#4A6070;line-height:1.75">No obligation. No pressure. The audit is designed to show whether your current setup gives you enough evidence &mdash; whether you proceed with Sentry Compliance or not.</p>
+      </div>
+      <div class="audit-panel fade">
+        <h3>Book Your Free Compliance Audit</h3>
+        <p>We will review your current cold storage monitoring setup and provide a written gap report identifying any documentation or monitoring gaps.</p>
+        <a href="#contact" class="btn btn-amber">Book My Free Audit</a>
+        <span class="micro">No obligation. Melbourne pharmacies only during initial rollout.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="pad" aria-labelledby="h2-faq">
+  <div class="wrap">
+    <p class="eyebrow fade">Common Questions</p>
+    <h2 id="h2-faq" class="fade">Frequently Asked Questions</h2>
+    <div class="faq-list fade">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa1">Do I own the monitoring hardware?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa1"><p>No. Sentry Compliance owns and maintains the installed monitoring equipment. Your subscription covers hardware, monitoring, maintenance, reporting, and support. If the service ends, the equipment is retrieved.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa2">What happens if my pharmacy internet goes down?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa2"><p>The monitoring gateway uses a cellular connection, so it does not rely on your pharmacy WiFi or local router. This helps reduce monitoring gaps caused by internet changes or outages.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa3">What temperature range do you monitor?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa3"><p>For vaccine cold chain monitoring, sensors are generally configured around the +2&deg;C to +8&deg;C range, with alert thresholds set to suit the pharmacy&rsquo;s requirements. Thresholds can be configured based on the storage requirement of the products being monitored.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa4">How quickly will we be alerted?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa4"><p>Alerts are sent quickly after a configured threshold breach is detected. The service can escalate to a secondary contact if the first contact does not acknowledge the alert within the configured period.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa5">Is the report TGA approved?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa5"><p>The report is not &ldquo;TGA approved&rdquo; and should not be described that way. It is designed to support TGA-aligned cold chain compliance evidence by documenting readings, alerts, response events, uptime, and calibration status &mdash; providing structured records for audit preparation and accreditation purposes.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa6">How long does installation take?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa6"><p>A standard pharmacy installation usually takes 2&ndash;3 hours. Monitoring can typically go live the same day, with the first compliance report generated at the end of that month.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa7">Can this support more than one pharmacy?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa7"><p>Yes. Multi-site owners can receive separate site reports and consolidated support. Multi-site pricing is available &mdash; contact us to discuss your requirements.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa8">Does this replace our legal or professional responsibility?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa8"><p>No. The service provides monitoring, alerting, reporting, and calibration support. Pharmacy owners and pharmacists remain responsible for meeting all applicable regulatory, clinical, and professional obligations.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="pad-lg" aria-labelledby="h2-contact">
+  <div class="wrap" style="position:relative;z-index:1">
+    <p class="eyebrow fade">Get Started</p>
+    <h2 id="h2-contact" class="fade" style="color:var(--lt)">Book Your Free Compliance Audit</h2>
+    <p class="contact-sub fade">We will review your current cold storage monitoring setup and provide a written gap report. No obligation. Melbourne pharmacies only during initial rollout.</p>
+    <div class="contact-layout">
+      <!--
+        FORM ENDPOINT — REPLACE BEFORE GOING LIVE:
+        Option A — Formspree:  action="https://formspree.io/f/YOUR_ID" method="POST" (remove enctype)
+        Option B — Netlify:    add netlify attribute, action="/thank-you" method="POST"
+        Option C — Server:     action="/api/book-audit" method="POST"
+        Remove enctype="text/plain" when switching to a real endpoint.
+        No API keys, credentials, or backend secrets should ever appear in this file.
+      -->
+      <form class="form-box fade" id="audit-form" method="POST" action="mailto:[ADD EMAIL]" enctype="text/plain" aria-label="Book a free pharmacy compliance audit" novalidate>
+        <div class="form-row">
+          <div class="fg"><label for="f-name">Your Name <span aria-hidden="true">*</span></label><input type="text" id="f-name" name="name" autocomplete="name" required placeholder="Jane Smith"></div>
+          <div class="fg"><label for="f-pharmacy">Pharmacy Name <span aria-hidden="true">*</span></label><input type="text" id="f-pharmacy" name="pharmacy" required placeholder="Main Street Pharmacy"></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label for="f-suburb">Suburb <span aria-hidden="true">*</span></label><input type="text" id="f-suburb" name="suburb" required placeholder="Carlton"></div>
+          <div class="fg"><label for="f-phone">Phone <span aria-hidden="true">*</span></label><input type="tel" id="f-phone" name="phone" autocomplete="tel" required placeholder="03 9XXX XXXX"></div>
+        </div>
+        <div class="fg"><label for="f-email">Email Address <span aria-hidden="true">*</span></label><input type="email" id="f-email" name="email" autocomplete="email" required placeholder="jane@yourpharmacy.com.au"></div>
+        <div class="form-row">
+          <div class="fg"><label for="f-units">Cold Storage Units</label><select id="f-units" name="units"><option value="">Select&hellip;</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5 or more</option></select></div>
+          <div class="fg"><label for="f-setup">Current Monitoring</label><select id="f-setup" name="current_setup"><option value="">Select&hellip;</option><option>Manual logbook</option><option>Basic data logger</option><option>WiFi sensor</option><option>Existing commercial system</option><option>Not sure</option></select></div>
+        </div>
+        <div class="fg"><label for="f-msg">Anything else to mention?</label><textarea id="f-msg" name="message" placeholder="Optional &mdash; any questions or concerns about your current setup"></textarea></div>
+        <div class="privacy-note" role="note">
+          <strong>Privacy notice</strong>
+          We only use your details to contact you about your compliance audit request. Do not submit patient information through this form. Operational monitoring data and compliance records are handled separately as part of the managed service.
+        </div>
+        <button type="submit" class="btn btn-amber form-submit">Book My Free Audit</button>
+        <p class="form-note">By submitting this form you agree to be contacted by Sentry Compliance regarding your enquiry. Melbourne service area only during initial rollout.</p>
+      </form>
+      <div class="contact-aside">
+        <div class="contact-card fade">
+          <h3>Contact Details</h3>
+          <div class="cd"><p class="cd-l">Phone</p><p class="cd-v">[ADD PHONE NUMBER]</p></div>
+          <div class="cd"><p class="cd-l">Email</p><p class="cd-v">[ADD EMAIL]</p></div>
+          <div class="cd"><p class="cd-l">Service Area</p><p class="cd-v">Melbourne metro</p></div>
+          <div class="cd"><p class="cd-l">Hours</p><p class="cd-v">Monday&ndash;Friday<br>8:00am &ndash; 5:00pm</p></div>
+        </div>
+        <!-- Mobile backend view -->
+        <div class="fade">
+          <p class="eyebrow" style="margin-bottom:.75rem">Monitoring at a glance</p>
+          <div class="mob-wrap">
+            <div class="mob-phone" role="img" aria-label="Mobile monitoring backend view showing current fridge temperatures and status for Example Pharmacy">
+              <div class="mob-screen">
+                <div class="mob-sb">
+                  <div class="mob-sb-title">Sentry Monitoring</div>
+                  <div class="mob-sb-site">Example Pharmacy &mdash; Carlton</div>
+                </div>
+                <div class="mob-row"><span class="mob-dev">Fridge 1</span><span class="mob-temp ok"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block"></span>+4.6&deg;C</span></div>
+                <div class="mob-row"><span class="mob-dev">Fridge 2</span><span class="mob-temp ok"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block"></span>+5.2&deg;C</span></div>
+                <div class="mob-row"><span class="mob-dev">Vaccine Freezer</span><span class="mob-temp ok"><span style="width:6px;height:6px;border-radius:50%;background:#7EC8E3;display:inline-block"></span>&minus;18.4&deg;C</span></div>
+                <div class="mob-stamp">Last reading: 2 minutes ago</div>
+                <div class="mob-btns">
+                  <span class="mob-btn primary">View Monthly Report</span>
+                  <span class="mob-btn outline">Acknowledge Alert</span>
+                </div>
+                <div class="mob-home"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <div class="logo"><span>SENTRY</span> COMPLIANCE</div>
+        <p class="ft-tag">Cold Chain Compliance Monitoring for Independent Pharmacies<br>Melbourne, Victoria, Australia</p>
+        <p class="ft-abn">Sentry Compliance Pty Ltd &nbsp;|&nbsp; ABN: [ADD ABN]</p>
+      </div>
+      <nav class="ft-links" aria-label="Footer navigation">
+        <a href="#" rel="noopener noreferrer">Privacy Policy</a>
+        <a href="#" rel="noopener noreferrer">Terms</a>
         <a href="#contact">Contact</a>
       </nav>
-      <p class="disclaimer">Sentry Compliance provides monitoring, alerting, reporting, and calibration support. Pharmacy owners and pharmacists remain responsible for meeting all applicable regulatory, clinical, and professional obligations.</p>
     </div>
-  </footer>
+    <div class="ft-bottom">
+      <p class="ft-disc">Sentry Compliance provides monitoring, alerting, reporting, and calibration support. Pharmacy owners and pharmacists remain responsible for meeting all applicable regulatory, clinical, and professional obligations.</p>
+      <p class="ft-copy">&copy; <span id="yr"></span> Sentry Compliance Pty Ltd</p>
+    </div>
+  </div>
+</footer>
 
-  <script>
-    const toggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelectorAll(".main-nav a");
+<script>
+/* Year */
+document.getElementById('yr').textContent = new Date().getFullYear();
 
-    toggle.addEventListener("click", () => {
-      const isOpen = document.body.classList.toggle("nav-open");
-      toggle.setAttribute("aria-expanded", String(isOpen));
-      toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+/* Hamburger */
+const burger = document.getElementById('burger');
+const mob = document.getElementById('mob-menu');
+burger.addEventListener('click', () => {
+  const open = mob.classList.toggle('open');
+  burger.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('.mob-link,.mob-menu .btn').forEach(l => {
+  l.addEventListener('click', () => {
+    mob.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  });
+});
+
+/* Smooth scroll */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const t = document.querySelector(this.getAttribute('href'));
+    if (t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + scrollY - 72, behavior: 'smooth' }); }
+  });
+});
+
+/* Fade-in via IntersectionObserver */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const sibs = [...entry.target.parentElement.querySelectorAll('.fade')];
+    const i = sibs.indexOf(entry.target);
+    setTimeout(() => entry.target.classList.add('in'), i * 70);
+    io.unobserve(entry.target);
+  });
+}, { threshold: 0, rootMargin: '0px 0px 9999px 0px' });
+document.querySelectorAll('.fade').forEach(el => io.observe(el));
+/* Fallback: ensure all elements visible after page load */
+window.addEventListener('load', () => {
+  setTimeout(() => document.querySelectorAll('.fade').forEach(el => el.classList.add('in')), 100);
+});
+
+/* FAQ accordion */
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-q').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      const a = document.getElementById(b.getAttribute('aria-controls'));
+      if (a) a.style.maxHeight = 0;
     });
+    if (!open) {
+      btn.setAttribute('aria-expanded', 'true');
+      const a = document.getElementById(btn.getAttribute('aria-controls'));
+      if (a) a.style.maxHeight = a.scrollHeight + 'px';
+    }
+  });
+});
 
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        document.body.classList.remove("nav-open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.setAttribute("aria-label", "Open navigation");
-      });
-    });
-
-    document.querySelectorAll(".faq-question").forEach((button) => {
-      button.addEventListener("click", () => {
-        const item = button.closest(".faq-item");
-        const isOpen = item.classList.toggle("is-open");
-        button.setAttribute("aria-expanded", String(isOpen));
-      });
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0, rootMargin: '0px 0px 9999px 0px' });
-
-    document.querySelectorAll(".fade-in").forEach((element) => observer.observe(element));
-    // Fallback: after page load, ensure all elements are visible (handles full-page screenshots)
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.querySelectorAll('.fade-in').forEach(el => el.classList.add('is-visible'));
-      }, 50);
-    });
-  </script>
+/* Basic form validation */
+document.getElementById('audit-form').addEventListener('submit', function(e) {
+  const required = this.querySelectorAll('[required]');
+  let valid = true;
+  required.forEach(field => {
+    if (!field.value.trim()) { field.style.borderColor = '#C94040'; valid = false; }
+    else { field.style.borderColor = ''; }
+  });
+  if (!valid) { e.preventDefault(); required[0].focus(); }
+});
+</script>
 </body>
 </html>
