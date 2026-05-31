@@ -463,12 +463,25 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
 .model-cta-actions{display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;flex-shrink:0}
 @media(max-width:960px){.model-grid,.factors-row{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.model-grid,.factors-row{grid-template-columns:1fr}.model-cta-inner{flex-direction:column}.model-cta-actions{width:100%}.model-cta-actions .btn{width:100%;justify-content:center}}
+
+/* REAL PHOTOS */
+.nav-logo-img{height:36px;width:auto;display:block}
+.logo-img-link{display:flex;align-items:center;flex-shrink:0}
+.footer-logo-img{height:44px;width:auto;display:block;margin-bottom:.625rem}
+.hero-img-wrap{width:100%}
+.hero-photo{width:100%;height:auto;border-radius:8px;display:block;box-shadow:0 24px 64px rgba(0,0,0,.4)}
+.section-photo{width:100%;height:auto;display:block}
+.section-photo.rounded{border-radius:8px;box-shadow:0 16px 40px rgba(11,25,41,.2)}
+.install-photo-wrap{margin-top:2.5rem;max-height:480px;overflow:hidden;border-radius:8px;box-shadow:0 16px 40px rgba(11,25,41,.15)}
+.install-photo-wrap img{width:100%;height:480px;object-fit:cover;object-position:center top}
 </style>
 
 <!-- NAV -->
 <nav id="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-in">
-    <a href="#hero" class="logo"><span>SENTRY</span> COMPLIANCE</a>
+    <a href="#hero" class="logo-img-link" aria-label="Sentry Compliance — return to top">
+      <img src="images/logo.png" alt="Sentry Compliance logo" class="nav-logo-img">
+    </a>
     <div class="nav-links" role="menubar">
       <a href="#risk" role="menuitem">The Risk</a>
       <a href="#how-it-works" role="menuitem">How It Works</a>
@@ -513,71 +526,17 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
           <span class="badge" role="listitem">Annual Calibration Support</span>
         </div>
       </div>
-      <!-- Hero Dashboard Mockup -->
-      <div class="fade" role="img" aria-label="Mockup of Sentry Compliance cold chain monitoring dashboard showing active vaccine fridge monitoring for Example Pharmacy Carlton">
-        <div class="dashboard">
-          <div class="db-hd">
-            <div>
-              <div class="db-site">Sentry Compliance Monitoring<span>Example Pharmacy — Carlton</span></div>
-            </div>
-            <div class="db-live">Monitoring Active</div>
-          </div>
-          <div class="db-body">
-            <div class="db-section-title">Cold Storage Units</div>
-            <div class="db-row">
-              <span class="db-lbl">Fridge 1 — Vaccine Refrigerator</span>
-              <span class="db-val ok"><span class="dot dot-ok"></span>+4.6&deg;C &mdash; Normal</span>
-            </div>
-            <div class="db-row">
-              <span class="db-lbl">Fridge 2 — Vaccine Refrigerator</span>
-              <span class="db-val ok"><span class="dot dot-ok"></span>+5.2&deg;C &mdash; Normal</span>
-            </div>
-            <div class="db-row">
-              <span class="db-lbl">Vaccine Freezer</span>
-              <span class="db-val fr"><span class="dot dot-fr"></span>&minus;18.4&deg;C &mdash; Normal</span>
-            </div>
-            <div class="db-divider"></div>
-            <div class="db-section-title">Connection &amp; Status</div>
-            <div class="db-row">
-              <span class="db-lbl">Gateway Connection</span>
-              <span class="db-val ok"><span class="dot dot-ok"></span>Cellular Online</span>
-            </div>
-            <div class="db-row">
-              <span class="db-lbl">Last Reading</span>
-              <span class="db-val am">2 minutes ago</span>
-            </div>
-            <div class="db-row">
-              <span class="db-lbl">Reporting Interval</span>
-              <span class="db-val">Every 10 minutes</span>
-            </div>
-            <!-- Temperature line chart -->
-            <div class="db-chart-wrap">
-              <div class="chart-head">
-                <span class="chart-lbl">Fridge 1 — 24h temperature trend</span>
-                <span class="chart-range">Range: +2&deg;C to +8&deg;C</span>
-              </div>
-              <svg class="chart-svg" viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                <!-- Upper threshold line: 8C -->
-                <line x1="0" y1="16" x2="280" y2="16" stroke="#D4A017" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
-                <!-- Lower threshold line: 2C -->
-                <line x1="0" y1="56" x2="280" y2="56" stroke="#D4A017" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
-                <!-- Y-axis labels -->
-                <text x="2" y="14" fill="#8FA8C0" font-size="7" font-family="Inter,sans-serif">+8&deg;C</text>
-                <text x="2" y="60" fill="#8FA8C0" font-size="7" font-family="Inter,sans-serif">+2&deg;C</text>
-                <!-- Shaded safe zone -->
-                <rect x="0" y="16" width="280" height="40" fill="rgba(61,170,114,0.07)"/>
-                <!-- Temperature line -->
-                <polyline points="0,40 12,38 24,42 36,41 48,39 60,38 72,40 84,42 96,41 108,39 120,40 132,38 144,41 156,42 168,40 180,39 192,41 204,40 216,38 228,40 240,41 252,39 264,40 280,41" fill="none" stroke="#3DAA72" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
-                <!-- Current reading dot -->
-                <circle cx="280" cy="41" r="3" fill="#3DAA72"/>
-              </svg>
-            </div>
-          </div>
-          <div class="db-ft">
-            <span>Monthly report: Ready 1st of each month</span>
-            <span style="color:var(--amber)">&#9679; Live</span>
-          </div>
-        </div>
+      <!-- Hero image — pharmacist reviewing Sentry Compliance monitoring dashboard -->
+      <div class="fade hero-img-wrap">
+        <img
+          src="images/hero-dashboard.jpg"
+          alt="Pharmacist reviewing the Sentry Compliance cold chain monitoring dashboard showing vaccine fridge temperatures"
+          class="hero-photo"
+          loading="eager"
+          width="600"
+          height="600"
+        >
+      </div>
       </div>
     </div>
   </div>
@@ -676,6 +635,18 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
         <p>Your temperature record builds automatically. If a reading moves outside the configured range, nominated contacts receive alerts. At the start of each month, you receive a compliance report.</p>
       </article>
     </div>
+    <!-- Installation photo — pharmacist next to vaccine fridge with Sentry sensor and gateway installed -->
+    <div class="fade install-photo-wrap">
+      <img
+        src="images/installation.jpg"
+        alt="Pharmacist standing next to a vaccine fridge with Sentry Compliance wireless sensor and cellular gateway professionally installed"
+        class="section-photo rounded"
+        loading="lazy"
+        width="1080"
+        height="1080"
+      >
+    </div>
+
     <!-- Workflow Diagram -->
     <div class="diagram fade" role="img" aria-label="Diagram showing wireless sensor inside fridge connecting to cellular gateway, then to cloud monitoring platform, then to SMS and email alerts, and finally to monthly compliance report">
       <p class="diag-title">How Monitoring Works End-to-End</p>
@@ -767,27 +738,18 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
     <h2 id="h2-alerts" class="fade">What Happens During a Temperature Excursion</h2>
     <p class="fade" style="max-width:640px;color:#4A6070;font-size:1.04rem;line-height:1.85;margin-top:.875rem">When a sensor detects a reading outside its configured threshold, the system immediately alerts nominated contacts via SMS and email. If the first contact does not acknowledge within the configured period, the alert escalates to a secondary contact. Every excursion event is recorded and included in the monthly compliance report.</p>
     <div class="alerts-grid" style="margin-top:2.5rem">
-      <!-- SMS phone mockup -->
-      <div>
-        <p class="eyebrow fade" style="margin-bottom:1rem">SMS Alert Example</p>
-        <div class="phone-wrap fade">
-          <div class="phone" role="img" aria-label="SMS temperature excursion alert example for pharmacy cold chain monitoring — Fridge 2 at 8.7 degrees Celsius">
-            <div class="p-screen">
-              <div class="p-status"><span>9:47 AM</span><span>&#9679;&#9679;&#9679;</span></div>
-              <div class="p-sms-hd">
-                <div class="p-sms-name">Sentry Compliance</div>
-                <div class="p-sms-info">Monitoring Alert</div>
-              </div>
-              <div class="p-body">
-                <div class="p-time">Today 9:47 AM</div>
-                <div class="sms-b alert">&#9888; SENTRY ALERT: Fridge 2 at Example Pharmacy is reading 8.7&deg;C, above configured range (+2&deg;C to +8&deg;C). Please check fridge door, power, and product condition. Acknowledge this alert to prevent escalation.</div>
-                <div class="p-time">Today 9:52 AM</div>
-                <div class="sms-b reply">Acknowledged &mdash; checking fridge now.</div>
-              </div>
-              <div class="p-home"></div>
-            </div>
-          </div>
-        </div>
+      <!-- Alert phone image — hand holding phone showing temperature alert -->
+      <div class="fade">
+        <p class="eyebrow" style="margin-bottom:1rem">Real-Time Alert Example</p>
+        <img
+          src="images/alert-phone.jpg"
+          alt="SMS temperature excursion alert example for pharmacy cold chain monitoring showing 8.7 degrees Celsius above range"
+          class="section-photo rounded"
+          loading="lazy"
+          width="600"
+          height="600"
+        >
+      </div></div>
       </div>
       <!-- Email mockup -->
       <div>
@@ -853,44 +815,17 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
         </ul>
       </div>
       <!-- PDF Mockup -->
-      <div class="pdf-wrap fade" role="img" aria-label="Monthly cold chain compliance report mockup for pharmacy audit documentation showing Example Pharmacy March 2026">
-        <div class="pdf-outer">
-          <div class="pdf">
-            <div class="pdf-hd">
-              <div>
-                <div class="pdf-hd-title">Cold Chain Compliance Report</div>
-                <div class="pdf-hd-sub">TGA-Aligned Monitoring Documentation</div>
-              </div>
-              <div class="pdf-logo"><span>SENTRY</span> COMPLIANCE</div>
-            </div>
-            <div class="pdf-body">
-              <div class="pdf-meta">
-                <div class="pm"><label>Pharmacy</label><p>Example Pharmacy</p></div>
-                <div class="pm"><label>Reporting Period</label><p>March 2026</p></div>
-                <div class="pm"><label>Overall Status</label><p style="color:#2e7d4f">&#9679; Monitoring Active</p></div>
-                <div class="pm"><label>Monitoring Uptime</label><p>99.8%</p></div>
-              </div>
-              <div class="pdf-sec">Temperature Summary</div>
-              <table class="pdf-tbl">
-                <thead><tr><th>Unit</th><th>Min</th><th>Max</th><th>Avg</th><th>Status</th></tr></thead>
-                <tbody>
-                  <tr><td>Fridge 1</td><td>+3.8&deg;C</td><td>+5.9&deg;C</td><td>+4.7&deg;C</td><td style="color:#2e7d4f;font-weight:700">Within range</td></tr>
-                  <tr><td>Fridge 2</td><td>+3.6&deg;C</td><td>+6.2&deg;C</td><td>+5.1&deg;C</td><td style="color:#2e7d4f;font-weight:700">Within range</td></tr>
-                </tbody>
-              </table>
-              <div class="pdf-sec">Compliance Status</div>
-              <div class="pdf-sr"><span class="pdf-sl">Excursion events</span><span class="pdf-sv ok">0 recorded</span></div>
-              <div class="pdf-sr"><span class="pdf-sl">Alert events</span><span class="pdf-sv ok">None</span></div>
-              <div class="pdf-sr"><span class="pdf-sl">Calibration status</span><span class="pdf-sv ok">Current</span></div>
-              <div class="pdf-sr"><span class="pdf-sl">Data retention</span><span class="pdf-sv">5-year secure archive</span></div>
-            </div>
-            <div class="pdf-ft">
-              <p>Issued by: Sentry Compliance Pty Ltd &mdash; sentrycompliance.com.au</p>
-              <p style="font-weight:600;color:#555">1 April 2026</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- Report image — compliance report document and monitoring dashboard on laptop -->
+      <div class="fade">
+        <img
+          src="images/report-desk.jpg"
+          alt="Monthly cold chain compliance report document and Sentry Compliance monitoring dashboard on laptop for pharmacy audit documentation"
+          class="section-photo rounded"
+          loading="lazy"
+          width="600"
+          height="600"
+        >
+      </div></div>
     </div>
   </div>
 </section>
@@ -1106,7 +1041,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
   <div class="wrap">
     <div class="ft-grid">
       <div>
-        <div class="logo"><span>SENTRY</span> COMPLIANCE</div>
+        <img src="images/logo.png" alt="Sentry Compliance logo" class="footer-logo-img">
         <p class="ft-tag">Cold Chain Compliance Monitoring for Independent Pharmacies<br>Melbourne, Victoria, Australia</p>
         <p class="ft-abn">Sentry Compliance &nbsp;|&nbsp; ABN: 80 649 400 626</p>
       </div>
