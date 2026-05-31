@@ -463,12 +463,16 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
 .model-cta-actions{display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;flex-shrink:0}
 @media(max-width:960px){.model-grid,.factors-row{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.model-grid,.factors-row{grid-template-columns:1fr}.model-cta-inner{flex-direction:column}.model-cta-actions{width:100%}.model-cta-actions .btn{width:100%;justify-content:center}}
+
+/* Logo icon alongside text */
+.logo{display:flex;align-items:center;gap:.6rem}
+.logo-icon{height:32px;width:auto;display:block;flex-shrink:0}
 </style>
 
 <!-- NAV -->
 <nav id="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-in">
-    <a href="#hero" class="logo"><span>SENTRY</span> COMPLIANCE</a>
+    <a href="#hero" class="logo"><img src="images/logo.png" alt="" class="logo-icon" aria-hidden="true"><span>SENTRY</span> COMPLIANCE</a>
     <div class="nav-links" role="menubar">
       <a href="#risk" role="menuitem">The Risk</a>
       <a href="#how-it-works" role="menuitem">How It Works</a>
@@ -1106,7 +1110,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
   <div class="wrap">
     <div class="ft-grid">
       <div>
-        <div class="logo"><span>SENTRY</span> COMPLIANCE</div>
+        <div class="logo"><img src="images/logo.png" alt="" class="logo-icon" aria-hidden="true"><span>SENTRY</span> COMPLIANCE</div>
         <p class="ft-tag">Cold Chain Compliance Monitoring for Independent Pharmacies<br>Melbourne, Victoria, Australia</p>
         <p class="ft-abn">Sentry Compliance &nbsp;|&nbsp; ABN: 80 649 400 626</p>
       </div>
