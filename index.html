@@ -57,7 +57,7 @@
 {"@context":"https://schema.org","@graph":[
 {"@type":"LocalBusiness","@id":"https://sentrycompliance.com.au/#business",
 "name":"Sentry Compliance Pty Ltd","url":"https://sentrycompliance.com.au",
-"telephone":"[ADD PHONE NUMBER]","email":"[ADD EMAIL]",
+"telephone":"03 9977 6985","email":"info@sentrycompliance.com.au",
 "description":"Fully managed cold chain temperature monitoring for independent Melbourne pharmacies. TGA-aligned compliance reports, 24/7 cellular alerts, annual calibration, 5-year data retention.",
 "address":{"@type":"PostalAddress","addressLocality":"Melbourne","addressRegion":"VIC","addressCountry":"AU"},
 "areaServed":{"@type":"City","name":"Melbourne"},
@@ -1037,13 +1037,13 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
     <div class="contact-layout">
       <!--
         FORM ENDPOINT — REPLACE BEFORE GOING LIVE:
-        Option A — Formspree:  action="https://formspree.io/f/YOUR_ID" method="POST" (remove enctype)
+        Option A — Formspree:  action="form-handler.php" method="POST" (remove enctype)
         Option B — Netlify:    add netlify attribute, action="/thank-you" method="POST"
         Option C — Server:     action="/api/book-audit" method="POST"
-        Remove enctype="text/plain" when switching to a real endpoint.
+        Remove when switching to a real endpoint.
         No API keys, credentials, or backend secrets should ever appear in this file.
       -->
-      <form class="form-box fade" id="audit-form" method="POST" action="mailto:[ADD EMAIL]" enctype="text/plain" aria-label="Book a free pharmacy compliance audit" novalidate>
+      <form class="form-box fade" id="audit-form" method="POST" action="form-handler.php" aria-label="Book a free pharmacy compliance audit" novalidate>
         <div class="form-row">
           <div class="fg"><label for="f-name">Your Name <span aria-hidden="true">*</span></label><input type="text" id="f-name" name="name" autocomplete="name" required placeholder="Jane Smith"></div>
           <div class="fg"><label for="f-pharmacy">Pharmacy Name <span aria-hidden="true">*</span></label><input type="text" id="f-pharmacy" name="pharmacy" required placeholder="Main Street Pharmacy"></div>
@@ -1068,8 +1068,8 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
       <div class="contact-aside">
         <div class="contact-card fade">
           <h3>Contact Details</h3>
-          <div class="cd"><p class="cd-l">Phone</p><p class="cd-v">[ADD PHONE NUMBER]</p></div>
-          <div class="cd"><p class="cd-l">Email</p><p class="cd-v">[ADD EMAIL]</p></div>
+          <div class="cd"><p class="cd-l">Phone</p><p class="cd-v">03 9977 6985</p></div>
+          <div class="cd"><p class="cd-l">Email</p><p class="cd-v">info@sentrycompliance.com.au</p></div>
           <div class="cd"><p class="cd-l">Service Area</p><p class="cd-v">Melbourne metro</p></div>
           <div class="cd"><p class="cd-l">Hours</p><p class="cd-v">Monday&ndash;Friday<br>8:00am &ndash; 5:00pm</p></div>
         </div>
