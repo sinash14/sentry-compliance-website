@@ -592,16 +592,64 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
           <span class="badge" role="listitem">Annual Calibration Support</span>
         </div>
       </div>
-      <!-- Hero photo — pharmacist reviewing Sentry Compliance dashboard -->
-      <div class="fade hero-right-col">
-        <img
-          src="images/hero-dashboard.jpg"
-          alt="Pharmacist reviewing Sentry Compliance cold chain monitoring dashboard showing live vaccine fridge temperatures"
-          class="hero-photo"
-          loading="eager"
-          width="1080"
-          height="1080"
-        >
+      <!-- Hero Dashboard Mockup -->
+      <div class="fade" role="img" aria-label="Mockup of Sentry Compliance cold chain monitoring dashboard showing active vaccine fridge monitoring for Example Pharmacy Carlton">
+        <div class="dashboard">
+          <div class="db-hd">
+            <div>
+              <div class="db-site">Sentry Compliance Monitoring<span>Example Pharmacy &mdash; Carlton</span></div>
+            </div>
+            <div class="db-live">Monitoring Active</div>
+          </div>
+          <div class="db-body">
+            <div class="db-section-title">Cold Storage Units</div>
+            <div class="db-row">
+              <span class="db-lbl">Fridge 1 &mdash; Vaccine Refrigerator</span>
+              <span class="db-val ok"><span class="dot dot-ok"></span>+4.6&deg;C &mdash; Normal</span>
+            </div>
+            <div class="db-row">
+              <span class="db-lbl">Fridge 2 &mdash; Vaccine Refrigerator</span>
+              <span class="db-val ok"><span class="dot dot-ok"></span>+5.2&deg;C &mdash; Normal</span>
+            </div>
+            <div class="db-row">
+              <span class="db-lbl">Vaccine Freezer</span>
+              <span class="db-val fr"><span class="dot dot-fr"></span>&minus;18.4&deg;C &mdash; Normal</span>
+            </div>
+            <div class="db-divider"></div>
+            <div class="db-section-title">Connection &amp; Status</div>
+            <div class="db-row">
+              <span class="db-lbl">Gateway Connection</span>
+              <span class="db-val ok"><span class="dot dot-ok"></span>Cellular Online</span>
+            </div>
+            <div class="db-row">
+              <span class="db-lbl">Last Reading</span>
+              <span class="db-val am">2 minutes ago</span>
+            </div>
+            <div class="db-row">
+              <span class="db-lbl">Reporting Interval</span>
+              <span class="db-val">Every 10 minutes</span>
+            </div>
+            <div class="db-chart-wrap">
+              <div class="chart-head">
+                <span class="chart-lbl">Fridge 1 &mdash; 24h temperature trend</span>
+                <span class="chart-range">Range: +2&deg;C to +8&deg;C</span>
+              </div>
+              <svg class="chart-svg" viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <line x1="0" y1="16" x2="280" y2="16" stroke="#D4A017" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+                <line x1="0" y1="56" x2="280" y2="56" stroke="#D4A017" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+                <text x="2" y="14" fill="#8FA8C0" font-size="7" font-family="Inter,sans-serif">+8&deg;C</text>
+                <text x="2" y="60" fill="#8FA8C0" font-size="7" font-family="Inter,sans-serif">+2&deg;C</text>
+                <rect x="0" y="16" width="280" height="40" fill="rgba(61,170,114,0.07)"/>
+                <polyline points="0,40 12,38 24,42 36,41 48,39 60,38 72,40 84,42 96,41 108,39 120,40 132,38 144,41 156,42 168,40 180,39 192,41 204,40 216,38 228,40 240,41 252,39 264,40 280,41" fill="none" stroke="#3DAA72" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+                <circle cx="280" cy="41" r="3" fill="#3DAA72"/>
+              </svg>
+            </div>
+          </div>
+          <div class="db-ft">
+            <span>Monthly report: Ready 1st of each month</span>
+            <span style="color:var(--amber)">&#9679; Live</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
