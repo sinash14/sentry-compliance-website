@@ -33,7 +33,7 @@
 <!-- Geo / Local SEO -->
 <meta name="geo.region" content="AU-VIC">
 <meta name="geo.placename" content="Melbourne, Victoria, Australia">
-<meta name="author" content="Sentry Compliance Pty Ltd">
+<meta name="author" content="Sentry Compliance">
 <!-- Open Graph image (replace [ADD-OG-IMAGE-URL] with real image URL before going live) -->
 <meta property="og:image" content="[ADD-OG-IMAGE-URL]">
 <meta property="og:image:width" content="1200">
@@ -56,9 +56,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"LocalBusiness","@id":"https://sentrycompliance.com.au/#business",
-"name":"Sentry Compliance Pty Ltd","url":"https://sentrycompliance.com.au",
-"telephone":"03 9977 6985","email":"info@sentrycompliance.com.au",
-"description":"Fully managed cold chain temperature monitoring for independent Melbourne pharmacies. TGA-aligned compliance reports, 24/7 cellular alerts, annual calibration, 5-year data retention.",
+"name":"Sentry Compliance","url":"https://sentrycompliance.com.au",
+"telephone":"+61399776985","email":"info@sentrycompliance.com.au",
+"description":"Fully managed cold chain temperature monitoring for independent community pharmacies in Melbourne. Includes wireless sensors, cellular gateway, 24/7 SMS and email alerts, monthly TGA-aligned compliance reports, annual calibration documentation, and 5-year monitoring data retention.",
 "address":{"@type":"PostalAddress","addressLocality":"Melbourne","addressRegion":"VIC","addressCountry":"AU"},
 "areaServed":{"@type":"City","name":"Melbourne"},
 "additionalProperty":{"@type":"PropertyValue","name":"ABN","value":"80 649 400 626"},
@@ -505,6 +505,24 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
 }
 .trust-grid .tc:first-child h3{font-size:1.45rem}
 @media(max-width:768px){.trust-grid .tc:first-child{grid-column:auto}}
+
+/* COMPARISON TABLE */
+.cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cmp-table-wrap{min-width:600px}
+.cmp-table{width:100%;border-collapse:collapse;font-size:.875rem;font-family:var(--sans)}
+.cmp-table th,.cmp-table td{padding:.875rem 1rem;text-align:left;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.55}
+.cmp-table thead tr{background:var(--navy)}
+.cmp-table thead th{color:var(--lt);font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;border-bottom:2px solid var(--amber)}
+.cmp-table thead th.cmp-highlight{background:var(--amber);color:var(--navy)}
+.cmp-table tbody th[scope=row]{font-weight:600;color:var(--dark);background:var(--white);white-space:nowrap}
+.cmp-table tbody td{color:#4A6070;background:var(--white)}
+.cmp-table tbody tr:nth-child(even) td,.cmp-table tbody tr:nth-child(even) th[scope=row]{background:var(--light)}
+.cmp-table tbody td.cmp-highlight{background:rgba(212,160,23,.06);color:var(--dark);font-weight:600;border-left:3px solid var(--amber)}
+.cmp-table tbody tr:nth-child(even) td.cmp-highlight{background:rgba(212,160,23,.10)}
+@media(max-width:768px){
+  .cmp-table{font-size:.78rem}
+  .cmp-table th,.cmp-table td{padding:.625rem .75rem}
+}
 </style>
 
 <!-- NAV -->
@@ -542,7 +560,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
       <div>
         <p class="hero-pre">TGA-Aligned Cold Chain Monitoring for Melbourne Pharmacies</p>
         <h1 id="h1">If Your Vaccine Fridge Failed Tonight, Would You Know Before Monday Morning?</h1>
-        <p class="hero-sub">Sentry Compliance installs and manages continuous cold chain monitoring for independent Melbourne pharmacies. 24/7 alerts, monthly compliance reports, annual calibration, and audit-ready documentation — without relying on your pharmacy WiFi.</p>
+        <p class="hero-sub">Sentry Compliance installs and manages continuous cold chain monitoring for independent Melbourne pharmacies. 24/7 alerts, monthly compliance reports, annual calibration, and structured compliance evidence documentation — without relying on your pharmacy WiFi.</p>
         <div class="hero-ctas">
           <a href="#contact" class="btn btn-amber">Book a Free Audit</a>
           <a href="#how-it-works" class="btn btn-ghost">See How It Works</a>
@@ -779,7 +797,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
             </svg>
           </div>
           <span class="fl">Monthly<br>Report</span>
-          <span class="fs">Audit-ready PDF</span>
+          <span class="fs">monthly compliance documentation PDF</span>
         </div>
       </div>
     </div>
@@ -798,6 +816,75 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
       <article class="feat fade"><p class="feat-n">04</p><h3>Monthly Compliance Reports</h3><p>A professionally formatted monthly PDF summarises readings, uptime, alerts, response events, and calibration status.</p></article>
       <article class="feat fade"><p class="feat-n">05</p><h3>Annual Calibration Support</h3><p>Sensors are checked against a traceable reference standard and supported with calibration documentation each year.</p></article>
       <article class="feat fade"><p class="feat-n">06</p><h3>5-Year Data Retention</h3><p>Your monitoring history is stored securely and can be accessed when needed for audits, accreditation, or internal review.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section id="comparison" class="pad" aria-labelledby="h2-comparison" style="background:var(--light)">
+  <div class="wrap">
+    <p class="eyebrow fade">Why Managed Monitoring</p>
+    <h2 id="h2-comparison" class="fade">Manual Logbook vs Basic Logger vs Managed Monitoring</h2>
+    <p class="fade" style="max-width:620px;color:#4A6070;font-size:1rem;line-height:1.8;margin-top:.875rem;margin-bottom:2rem">
+      Not all cold chain monitoring approaches produce the same compliance evidence.
+    </p>
+    <div class="fade cmp-wrap">
+      <div class="cmp-table-wrap">
+        <table class="cmp-table" aria-label="Comparison of cold chain monitoring approaches">
+          <thead>
+            <tr>
+              <th scope="col">Feature</th>
+              <th scope="col">Manual Logbook</th>
+              <th scope="col">Basic Data Logger</th>
+              <th scope="col" class="cmp-highlight">Sentry Compliance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Monitoring</th>
+              <td>Staff must remember to check and record</td>
+              <td>Records data but may need manual export</td>
+              <td class="cmp-highlight">Continuous monitoring with managed reporting</td>
+            </tr>
+            <tr>
+              <th scope="row">After-hours visibility</th>
+              <td>No live visibility when pharmacy is closed</td>
+              <td>Limited depending on device</td>
+              <td class="cmp-highlight">24/7 monitoring with alert capability</td>
+            </tr>
+            <tr>
+              <th scope="row">Alerts</th>
+              <td>No automatic alert</td>
+              <td>Local or limited alerts depending on setup</td>
+              <td class="cmp-highlight">SMS and email alerts to nominated contacts</td>
+            </tr>
+            <tr>
+              <th scope="row">Escalation</th>
+              <td>Manual follow-up only</td>
+              <td>Usually limited or none</td>
+              <td class="cmp-highlight">Two-tier escalation to secondary contacts</td>
+            </tr>
+            <tr>
+              <th scope="row">Monthly reporting</th>
+              <td>Paper or spreadsheet records</td>
+              <td>Manual export required</td>
+              <td class="cmp-highlight">Monthly compliance report delivered automatically</td>
+            </tr>
+            <tr>
+              <th scope="row">Calibration evidence</th>
+              <td>Separate process</td>
+              <td>Depends on device and maintenance</td>
+              <td class="cmp-highlight">Annual calibration support with documentation</td>
+            </tr>
+            <tr>
+              <th scope="row">Best suited for</th>
+              <td>Very small, low-risk setups</td>
+              <td>Basic historical record keeping</td>
+              <td class="cmp-highlight">Pharmacies wanting managed compliance evidence</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
@@ -927,7 +1014,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
               <div class="pdf-sr"><span class="pdf-sl">Data retention</span><span class="pdf-sv">5-year secure archive</span></div>
             </div>
             <div class="pdf-ft">
-              <p>Issued by: Sentry Compliance Pty Ltd &mdash; sentrycompliance.com.au</p>
+              <p>Issued by: Sentry Compliance &mdash; sentrycompliance.com.au</p>
               <p style="font-weight:600;color:#555">1 April 2026</p>
             </div>
           </div>
@@ -945,7 +1032,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
     <p class="fade" style="max-width:660px;color:#4A6070;font-size:1.04rem;line-height:1.85;margin-top:.875rem">
       Sentry Compliance is not a sensor kit you buy and manage yourself. It is a fully managed compliance
       monitoring service. We own the hardware, install it professionally, monitor it continuously, and
-      deliver a monthly compliance report to your inbox. If something needs attention, we handle it.
+      deliver a monthly compliance report to your inbox. If something needs attention, the system alerts nominated contacts and records the event for follow-up and reporting.
     </p>
 
     <!-- Three model pillars -->
@@ -1013,7 +1100,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
   <div class="wrap" style="position:relative;z-index:1">
     
     <h2 id="h2-why-sentry" class="fade" style="color:var(--lt)">Built for Regulated Environments, Not Gadget Buyers</h2>
-    <p class="why-intro fade">Sentry Compliance was created by infrastructure and operations specialists with experience in critical environments where uptime, documentation, escalation, and compliance evidence matter. The service is designed for pharmacy owners who need a practical monitoring system and clear records &mdash; not another device for staff to manage.</p>
+    <p class="why-intro fade">Sentry Compliance was founded from real-world infrastructure and operations experience across regulated, compliance-sensitive environments. The service is designed around monitoring, escalation, documentation, and operational risk &mdash; not just providing temperature sensors. For pharmacy owners, that means a practical system with clear monthly records that are ready to produce when asked.</p>
     <div class="trust-grid">
       <article class="tc fade"><p class="tc-n">01</p><h3>Melbourne Based</h3><p>Local service, local installation, and support for Melbourne pharmacies.</p></article>
       <article class="tc fade"><p class="tc-n">02</p><h3>Infrastructure Background</h3><p>Built from experience in critical systems, monitoring, power, HVAC, communications, and operational compliance.</p></article>
@@ -1062,11 +1149,29 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
       <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa2">What happens if my pharmacy internet goes down?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa2"><p>The monitoring gateway uses a cellular connection, so it does not rely on your pharmacy WiFi or local router. This helps reduce monitoring gaps caused by internet changes or outages.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa3">What temperature range do you monitor?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa3"><p>For vaccine cold chain monitoring, sensors are generally configured around the +2&deg;C to +8&deg;C range, with alert thresholds set to suit the pharmacy&rsquo;s requirements. Thresholds can be configured based on the storage requirement of the products being monitored.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa4">How quickly will we be alerted?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa4"><p>Alerts are sent quickly after a configured threshold breach is detected. The service can escalate to a secondary contact if the first contact does not acknowledge the alert within the configured period.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa5">Is the report TGA approved?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa5"><p>The report is not &ldquo;TGA approved&rdquo; and should not be described that way. It is designed to support TGA-aligned cold chain compliance evidence by documenting readings, alerts, response events, uptime, and calibration status &mdash; providing structured records for audit preparation and accreditation purposes.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa5">Is the report TGA approved?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa5"><p>The TGA does not generally approve individual monitoring service providers in that way. Sentry Compliance provides TGA-aligned monitoring records, alert history, calibration documentation, and monthly reports designed to support your cold chain compliance evidence. The records are designed for audit preparation and accreditation purposes, not as a TGA certification.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa6">How long does installation take?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa6"><p>A standard pharmacy installation usually takes 2&ndash;3 hours. Monitoring can typically go live the same day, with the first compliance report generated at the end of that month.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa7">Can this support more than one pharmacy?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa7"><p>Yes. Multi-site owners can receive separate site reports and consolidated support. Multi-site pricing is available &mdash; contact us to discuss your requirements.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="fa8">Does this replace our legal or professional responsibility?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" id="fa8"><p>No. The service provides monitoring, alerting, reporting, and calibration support. Pharmacy owners and pharmacists remain responsible for meeting all applicable regulatory, clinical, and professional obligations.</p></div></div>
     </div>
+  </div>
+</section>
+
+<!-- LOCAL SEO SECTION -->
+<section id="service-area" class="pad" aria-labelledby="h2-service-area" style="background:var(--white)">
+  <div class="wrap">
+    <h2 id="h2-service-area" class="fade" style="max-width:700px">Cold Chain Monitoring for Melbourne Pharmacies</h2>
+    <p class="fade" style="max-width:660px;color:#4A6070;font-size:1.04rem;line-height:1.85;margin-top:1.25rem">
+      Sentry Compliance supports independent pharmacies across Melbourne metro. Service areas include
+      inner Melbourne, Carlton, Brunswick, Richmond, South Yarra, North Melbourne, Fitzroy, Collingwood,
+      Docklands, Preston, Coburg, Hawthorn, Camberwell, Essendon, Moonee Ponds, Footscray, and surrounding suburbs.
+      If your pharmacy is in the Melbourne metro area and you are looking for managed cold chain monitoring,
+      contact us to confirm availability.
+    </p>
+    <p class="fade" style="max-width:660px;color:#4A6070;font-size:.94rem;line-height:1.75;margin-top:1rem">
+      The service is available to independent community pharmacies. Multi-site pharmacy groups
+      with two or more Melbourne locations can request consolidated reporting and multi-site pricing.
+    </p>
   </div>
 </section>
 
@@ -1104,7 +1209,12 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
           <strong>Privacy notice</strong>
           We only use your details to contact you about your compliance audit request. Do not submit patient information through this form. Operational monitoring data and compliance records are handled separately as part of the managed service.
         </div>
-        <button type="submit" class="btn btn-amber form-submit">Book a Free Audit</button>
+                <!-- Data security trust note -->
+        <div class="privacy-note" role="note" style="margin-bottom:1.25rem">
+          <strong>Data and reporting security</strong>
+          Monitoring records are handled as operational compliance records. Access to reports is limited to authorised contacts nominated by the pharmacy. Patient information is not required and should not be submitted through this website or monitoring platform.
+        </div>
+<button type="submit" class="btn btn-amber form-submit">Book a Free Audit</button>
         <p class="form-note">By submitting this form you agree to be contacted by Sentry Compliance regarding your enquiry. Melbourne service area only during initial rollout.</p>
       </form>
       <div class="contact-aside">
@@ -1150,7 +1260,7 @@ footer{background:var(--charcoal);border-top:1px solid var(--bd);padding:3rem 0 
       <div>
         <div class="logo"><img src="images/logo.png" alt="" class="logo-icon" aria-hidden="true"><span>SENTRY</span> COMPLIANCE</div>
         <p class="ft-tag">Cold Chain Compliance Monitoring for Independent Pharmacies<br>Melbourne, Victoria, Australia</p>
-        <p class="ft-abn">Sentry Compliance &nbsp;|&nbsp; ABN: 80 649 400 626</p>
+        <p class="ft-abn">Sentry Compliance Pty Ltd &nbsp;|&nbsp; ABN: 80 649 400 626</p>
       </div>
       <nav class="ft-links" aria-label="Footer navigation">
         <a href="#" rel="noopener noreferrer">Privacy Policy</a>
@@ -1238,4 +1348,40 @@ document.getElementById('audit-form').addEventListener('submit', function(e) {
 });
 </script>
 </body>
+
+<!--
+  ================================================================
+  FUTURE SEO PAGES — RECOMMENDED FOR PHASE 2
+  ================================================================
+  Create these pages to support SEO, GBP linking, and paid traffic:
+
+  /pharmacy-cold-chain-monitoring-melbourne/
+    → Primary service landing page, targets main keyword cluster
+    → Link from GBP website URL
+
+  /vaccine-fridge-monitoring/
+    → Targets "vaccine fridge monitoring Melbourne" searches
+    → Should explain the +2C to +8C range, Strive for 5
+
+  /cold-chain-compliance-reporting/
+    → Targets "cold chain compliance report pharmacy Australia"
+    → Show sample report structure, what it contains
+
+  /free-compliance-audit/
+    → Dedicated landing page for the free audit offer
+    → Remove friction, focus purely on booking
+
+  /contact/
+    → Separate contact page for GBP and directory listings
+
+  /privacy-policy/
+    → Required for GDPR/Privacy Act compliance
+    → Required before any ad campaigns
+
+  /terms/
+    → Terms of service for the managed monitoring agreement
+
+  Do NOT add visible navigation links to these pages until built.
+  ================================================================
+-->
 </html>
